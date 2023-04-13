@@ -1,0 +1,1005 @@
+2: 0
+3: {"1-da39a3ee5e6b4b0d3255bfef95601890afd80709"}
+4: {
+  1: {
+    1: {"Fairphone/FP3/FP3:9/8901.2.A.0105.20191217/12171325:user/release-keys"}
+    2: {"qcom"}
+    3: {"Fairphone"}
+    4: {".TA.3.0.c1-00565-8953_GEN_PACK-1,.TA.3.0.c1-00565-8953_GEN_PACK-1"}
+    5: {"unknown"}
+    6: {"android-uniscope"}
+    7: 1576561122
+    8: 19275037
+    9: {"FP3"}
+    10: 28
+    11: {"FP3"}
+    12: {"Fairphone"}
+    13: {"FP3"}
+    14: 0
+    15: {
+      1: 2
+      2: {"ms-android-uniscope"}
+    }
+    15: {
+      1: 5
+      2: {"mvapp-android-uniscope"}
+    }
+    15: {
+      1: 9
+      2: {"ms-android-uniscope"}
+    }
+    15: {
+      1: 4
+      2: {"gmm-android-uniscope"}
+    }
+    15: {
+      1: 6
+      2: {"am-android-uniscope"}
+    }
+    15: {
+      1: 1
+      2: {"android-uniscope"}
+    }
+    19: {"2019-12-05"}
+  }
+  2: 0
+  3: {
+    1: {"event_log_start"}
+    3: 1580413662631
+  }
+  3: {
+    1: {"event_log_start"}
+    3: 1580413984544
+  }
+  8: {"WIFI::"}
+  9: 0
+  14: 2
+  15: {
+    1: 1
+    2: 1
+    3: {"unspecified"}
+    4: {}
+    5: 0
+  }
+  18: 1
+  19: {"WIFI"}
+}
+6: {12: 9.155902e11i32}   # 0x53552d6ei32
+7: -1791219933935838326
+9: {"84cfbf8f2bdf"}
+10: {"357811090611905"}
+11: {}
+12: {"America/New_York"}
+14: 3
+15: {"+eBjakVbKgvqGgpzlIx35lE6iiM="}
+16: {"A209F8CH0201"}
+18: {
+  1: 3
+  2: 1
+  3: 1
+  4: 2
+  5: 0
+  6: 0
+  7: 480
+  8: 196610
+  9: {"android.ext.services"}
+  9: {"android.ext.shared"}
+  9: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 1.2791083649121865e213  # 0x6c2e657261776472i64
+    13: 1.3039158229230854e-76  # 0x302e32562d746867i64
+  }
+  9: {"android.hidl.manager-V1.0-java"}
+  9: {"android.test.base"}
+  9: {"android.test.mock"}
+  9: {
+    12: 4.3520013205641373e251  # 0x742e64696f72646ei64
+    12: 3.455435e30i32          # 0x722e7473i32
+    14: 4.5443564e30i32         # 0x72656e6ei32
+  }
+  9: {"com.android.future.usb.accessory"}
+  9: {"com.android.location.provider"}
+  9: {"com.android.media.remotedisplay"}
+  9: {"com.android.mediadrm.signer"}
+  9: {"com.android.nfc_extras"}
+  9: {"com.android.services"}
+  9: {"com.google.android.dialer.support"}
+  9: {"com.google.android.gms"}
+  9: {"com.google.android.maps"}
+  9: {"com.gsma.services.nfc"}
+  9: {"com.nxp.nfc.nq"}
+  9: {"com.qrd.wappush"}
+  9: {"com.qti.dpmapi"}
+  9: {"com.qti.dpmframework"}
+  9: {"com.qti.location.sdk"}
+  9: {"com.qti.snapdragon.sdk.display"}
+  9: {"com.qualcomm.embmslibrary"}
+  9: {"com.qualcomm.qcrilhook"}
+  9: {"com.qualcomm.qmapbridge"}
+  9: {"com.qualcomm.qti.QtiTelephonyServicelibrary"}
+  9: {"com.qualcomm.qti.audiosphere"}
+  9: {"com.qualcomm.qti.imscmservice-V2.0-java"}
+  9: {"com.qualcomm.qti.imscmservice-V2.1-java"}
+  9: {"com.qualcomm.qti.imscmservice@1.0-java"}
+  9: {"com.qualcomm.qti.lpa.uimlpalibrary"}
+  9: {"com.qualcomm.qti.ltedirectdiscoverylibrary"}
+  9: {"com.qualcomm.qti.remoteSimlock.manager.remotesimlockmanagerlibrary"}
+  9: {"com.qualcomm.qti.remoteSimlock.uimremotesimlocklibrary"}
+  9: {"com.qualcomm.qti.uim.uimservicelibrary"}
+  9: {"com.quicinc.cne"}
+  9: {"com.quicinc.cneapiclient"}
+  9: {"izat.xt.srv"}
+  9: {"javax.obex"}
+  9: {"org.apache.http.legacy"}
+  9: {"vendor.qti.hardware.data.connection-V1.0-java"}
+  9: {"vendor.qti.hardware.factory-V1.0"}
+  10: {"android.hardware.audio.output"}
+  10: {"android.hardware.bluetooth"}
+  10: {"android.hardware.bluetooth_le"}
+  10: {"android.hardware.camera"}
+  10: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 5.735720279860719e169   # 0x632e657261776472i64
+    12: 8.414499393736517e276   # 0x796e612e6172656di64
+  }
+  10: {"android.hardware.camera.autofocus"}
+  10: {"android.hardware.camera.capability.manual_post_processing"}
+  10: {"android.hardware.camera.capability.manual_sensor"}
+  10: {"android.hardware.camera.capability.raw"}
+  10: {"android.hardware.camera.flash"}
+  10: {"android.hardware.camera.front"}
+  10: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 5.735720279860719e169   # 0x632e657261776472i64
+    12: 2.1080362219100268e262  # 0x76656c2e6172656di64
+    12: 2.917895e32i32          # 0x75662e6ci32
+    13:EGROUP
+    13:EGROUP
+  }
+  10: {"android.hardware.faketouch"}
+  10: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 1.6144617321926332e184  # 0x662e657261776472i64
+    13: 7.358746945031531e223   # 0x6e6972707265676ei64
+    14:EGROUP
+  }
+  10: {"android.hardware.location"}
+  10: {"android.hardware.location.gps"}
+  10: {"android.hardware.location.network"}
+  10: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 8.382764580288506e217   # 0x6d2e657261776472i64
+    13: 3.9466026192472086e180  # 0x656e6f68706f7263i64
+  }
+  10: {"android.hardware.nfc"}
+  10: {"android.hardware.nfc.any"}
+  10: {"android.hardware.nfc.hce"}
+  10: {"android.hardware.nfc.hcef"}
+  10: {"android.hardware.opengles.aep"}
+  10: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 1.0134140540861765e242  # 0x722e657261776472i64
+    12: 1.1733908802423856e214  # 0x6c616d726f6e2e6di64
+  }
+  10: {"android.hardware.screen.landscape"}
+  10: {"android.hardware.screen.portrait"}
+  10: {"android.hardware.sensor.accelerometer"}
+  10: {"android.hardware.sensor.compass"}
+  10: {"android.hardware.sensor.gyroscope"}
+  10: {"android.hardware.sensor.light"}
+  10: {"android.hardware.sensor.proximity"}
+  10: {"android.hardware.sensor.stepcounter"}
+  10: {"android.hardware.sensor.stepdetector"}
+  10: {"android.hardware.telephony"}
+  10: {"android.hardware.telephony.cdma"}
+  10: {"android.hardware.telephony.gsm"}
+  10: {"android.hardware.touchscreen"}
+  10: {"android.hardware.touchscreen.multitouch"}
+  10: {"android.hardware.touchscreen.multitouch.distinct"}
+  10: {"android.hardware.touchscreen.multitouch.jazzhand"}
+  10: {"android.hardware.usb.accessory"}
+  10: {"android.hardware.usb.host"}
+  10: {"android.hardware.vulkan.compute"}
+  10: {"android.hardware.vulkan.level"}
+  10: {"android.hardware.vulkan.version"}
+  10: {"android.hardware.wifi"}
+  10: {
+    12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+    12: 1.225142415945115e266   # 0x772e657261776472i64
+    13: 6.4751898111237e170     # 0x63657269642e6966i64
+    14:EGROUP
+  }
+  10: {"android.software.activities_on_secondary_displays"}
+  10: {"android.software.app_widgets"}
+  10: {"android.software.autofill"}
+  10: {"android.software.backup"}
+  10: {"android.software.cant_save_state"}
+  10: {"android.software.companion_device_setup"}
+  10: {"android.software.connectionservice"}
+  10: {"android.software.cts"}
+  10: {"android.software.device_admin"}
+  10: {"android.software.file_based_encryption"}
+  10: {"android.software.home_screen"}
+  10: {"android.software.input_methods"}
+  10: {"android.software.live_wallpaper"}
+  10: {"android.software.managed_users"}
+  10: {"android.software.midi"}
+  10: {"android.software.picture_in_picture"}
+  10: {"android.software.print"}
+  10: {"android.software.securely_removes_users"}
+  10: {"android.software.sip"}
+  10: {"android.software.sip.voip"}
+  10: {"android.software.verified_boot"}
+  10: {"android.software.voice_recognizers"}
+  10: {"android.software.webview"}
+  10: {"com.google.android.apps.dialer.SUPPORTED"}
+  10: {"com.google.android.feature.EEA_DEVICE"}
+  10: {"com.google.android.feature.WELLBEING"}
+  10: {"com.google.android.paid.chrome"}
+  10: {"com.google.android.paid.search"}
+  10: {"com.nxp.mifare"}
+  11: {12: 2.149428755982193e160}   # 0x6138762d34366d72i64
+  11: {"armeabi-v7a"}
+  11: {"armeabi"}
+  12: 1080
+  13: 2160
+  14: {"af"}
+  14: {"af-ZA"}
+  14: {"am"}
+  14: {"am-ET"}
+  14: {"ar"}
+  14: {"ar-EG"}
+  14: {"ar-XB"}
+  14: {"as"}
+  14: {"az"}
+  14: {"be"}
+  14: {"bg"}
+  14: {"bg-BG"}
+  14: {"bn"}
+  14: {"bs"}
+  14: {"ca"}
+  14: {"ca-ES"}
+  14: {
+    12:SGROUP
+    14:SGROUP
+  }
+  14: {"cs-CZ"}
+  14: {"da"}
+  14: {"da-DK"}
+  14: {"de"}
+  14: {"de-DE"}
+  14: {"el"}
+  14: {12: 2.1386514e11i32}   # 0x52472d6ci32
+  14: {"en"}
+  14: {12: 1.3275054e13i32}   # 0x55412d6ei32
+  14: {12: 12.198591i32}      # 0x41432d6ei32
+  14: {12: 49.794365i32}      # 0x42472d6ei32
+  14: {12: 8.437994e08i32}    # 0x4e492d6ei32
+  14: {12: 9.155902e11i32}    # 0x53552d6ei32
+  14: {12: 13.511091i32}      # 0x41582d6ei32
+  14: {12: 216.17746i32}      # 0x43582d6ei32
+  14: {"es"}
+  14: {12: 8.468711e11i32}    # 0x53452d73i32
+  14: {12: 9.1559055e11i32}   # 0x53552d73i32
+  14: {"et"}
+  14: {"eu"}
+  14: {"fa"}
+  14: {"fa-IR"}
+  14: {"fi"}
+  14: {"fi-FI"}
+  14: {"fil"}
+  14: {"fil-PH"}
+  14: {"fr"}
+  14: {"fr-CA"}
+  14: {"fr-FR"}
+  14: {"gl"}
+  14: {"gu"}
+  14: {13: 105}
+  14: {"hi-IN"}
+  14: {13: 114}
+  14: {"hr-HR"}
+  14: {13: 117}
+  14: {"hu-HU"}
+  14: {13: 121}
+  14: {"in"}
+  14: {"in-ID"}
+  14: {"is"}
+  14: {"it"}
+  14: {"it-IT"}
+  14: {"iw"}
+  14: {"iw-IL"}
+  14: {"ja"}
+  14: {"ja-JP"}
+  14: {"ka"}
+  14: {
+    13:SGROUP
+    13:SGROUP
+  }
+  14: {"km"}
+  14: {"kn"}
+  14: {"ko"}
+  14: {"ko-KR"}
+  14: {"ky"}
+  14: {"lo"}
+  14: {
+    13:EGROUP
+    14:EGROUP
+  }
+  14: {"lt-LT"}
+  14: {"lv"}
+  14: {"lv-LV"}
+  14: {"mk"}
+  14: {"ml"}
+  14: {"mn"}
+  14: {"mr"}
+  14: {"ms"}
+  14: {13: 3.6095214e15i32}   # 0x594d2d73i32
+  14: {"my"}
+  14: {"nb"}
+  14: {"nb-NO"}
+  14: {"ne"}
+  14: {"nl"}
+  14: {"nl-NL"}
+  14: {"or"}
+  14: {14: 97}
+  14: {14: 108}
+  14: {"pl-PL"}
+  14: {14: 116}
+  14: {"pt-BR"}
+  14: {"pt-PT"}
+  14: {"ro"}
+  14: {"ro-RO"}
+  14: {"ru"}
+  14: {"ru-RU"}
+  14: {"si"}
+  14: {
+    14:SGROUP
+    13:SGROUP
+  }
+  14: {"sk-SK"}
+  14: {
+    14:SGROUP
+    13:EGROUP
+  }
+  14: {"sl-SI"}
+  14: {"sq"}
+  14: {"sr"}
+  14: {"sr-Latn"}
+  14: {"sr-RS"}
+  14: {"sv"}
+  14: {"sv-SE"}
+  14: {"sw"}
+  14: {"sw-TZ"}
+  14: {"ta"}
+  14: {"te"}
+  14: {"th"}
+  14: {"th-TH"}
+  14: {"tr"}
+  14: {"tr-TR"}
+  14: {"uk"}
+  14: {14: 13.323588i32}  # 0x41552d6bi32
+  14: {"ur"}
+  14: {"uz"}
+  14: {"vi"}
+  14: {"vi-VN"}
+  14: {"zh-CN"}
+  14: {"zh-HK"}
+  14: {"zh-TW"}
+  14: {"zu"}
+  14: {"zu-ZA"}
+  15: {"GL_AMD_compressed_ATC_texture"}
+  15: {"GL_AMD_performance_monitor"}
+  15: {"GL_ANDROID_extension_pack_es31a"}
+  15: {"GL_APPLE_texture_2D_limited_npot"}
+  15: {"GL_ARB_vertex_buffer_object"}
+  15: {"GL_ARM_shader_framebuffer_fetch_depth_stencil"}
+  15: {"GL_EXT_EGL_image_array"}
+  15: {"GL_EXT_EGL_image_external_wrap_modes"}
+  15: {"GL_EXT_EGL_image_storage"}
+  15: {"GL_EXT_YUV_target"}
+  15: {"GL_EXT_blend_func_extended"}
+  15: {"GL_EXT_blit_framebuffer_params"}
+  15: {"GL_EXT_buffer_storage"}
+  15: {"GL_EXT_clip_control"}
+  15: {"GL_EXT_clip_cull_distance"}
+  15: {"GL_EXT_color_buffer_float"}
+  15: {"GL_EXT_color_buffer_half_float"}
+  15: {"GL_EXT_copy_image"}
+  15: {"GL_EXT_debug_label"}
+  15: {"GL_EXT_debug_marker"}
+  15: {"GL_EXT_discard_framebuffer"}
+  15: {"GL_EXT_disjoint_timer_query"}
+  15: {"GL_EXT_draw_buffers_indexed"}
+  15: {"GL_EXT_external_buffer"}
+  15: {"GL_EXT_geometry_shader"}
+  15: {"GL_EXT_gpu_shader5"}
+  15: {"GL_EXT_memory_object"}
+  15: {"GL_EXT_memory_object_fd"}
+  15: {"GL_EXT_multisampled_render_to_texture"}
+  15: {"GL_EXT_multisampled_render_to_texture2"}
+  15: {"GL_EXT_primitive_bounding_box"}
+  15: {"GL_EXT_protected_textures"}
+  15: {"GL_EXT_robustness"}
+  15: {"GL_EXT_sRGB"}
+  15: {"GL_EXT_sRGB_write_control"}
+  15: {"GL_EXT_shader_framebuffer_fetch"}
+  15: {"GL_EXT_shader_io_blocks"}
+  15: {"GL_EXT_shader_non_constant_global_initializers"}
+  15: {"GL_EXT_tessellation_shader"}
+  15: {"GL_EXT_texture_border_clamp"}
+  15: {"GL_EXT_texture_buffer"}
+  15: {"GL_EXT_texture_cube_map_array"}
+  15: {"GL_EXT_texture_filter_anisotropic"}
+  15: {"GL_EXT_texture_format_BGRA8888"}
+  15: {"GL_EXT_texture_format_sRGB_override"}
+  15: {"GL_EXT_texture_norm16"}
+  15: {"GL_EXT_texture_sRGB_R8"}
+  15: {"GL_EXT_texture_sRGB_decode"}
+  15: {"GL_EXT_texture_type_2_10_10_10_REV"}
+  15: {"GL_KHR_blend_equation_advanced"}
+  15: {"GL_KHR_blend_equation_advanced_coherent"}
+  15: {"GL_KHR_debug"}
+  15: {"GL_KHR_no_error"}
+  15: {"GL_KHR_robust_buffer_access_behavior"}
+  15: {"GL_KHR_texture_compression_astc_hdr"}
+  15: {"GL_KHR_texture_compression_astc_ldr"}
+  15: {"GL_NV_shader_noperspective_interpolation"}
+  15: {"GL_OES_EGL_image"}
+  15: {"GL_OES_EGL_image_external"}
+  15: {"GL_OES_EGL_image_external_essl3"}
+  15: {"GL_OES_EGL_sync"}
+  15: {"GL_OES_blend_equation_separate"}
+  15: {"GL_OES_blend_func_separate"}
+  15: {"GL_OES_blend_subtract"}
+  15: {"GL_OES_compressed_ETC1_RGB8_texture"}
+  15: {"GL_OES_compressed_paletted_texture"}
+  15: {"GL_OES_depth24"}
+  15: {"GL_OES_depth_texture"}
+  15: {"GL_OES_depth_texture_cube_map"}
+  15: {"GL_OES_draw_texture"}
+  15: {"GL_OES_element_index_uint"}
+  15: {"GL_OES_framebuffer_object"}
+  15: {"GL_OES_get_program_binary"}
+  15: {"GL_OES_matrix_palette"}
+  15: {"GL_OES_packed_depth_stencil"}
+  15: {"GL_OES_point_size_array"}
+  15: {"GL_OES_point_sprite"}
+  15: {"GL_OES_read_format"}
+  15: {"GL_OES_rgb8_rgba8"}
+  15: {"GL_OES_sample_shading"}
+  15: {"GL_OES_sample_variables"}
+  15: {"GL_OES_shader_image_atomic"}
+  15: {"GL_OES_shader_multisample_interpolation"}
+  15: {"GL_OES_standard_derivatives"}
+  15: {"GL_OES_stencil_wrap"}
+  15: {"GL_OES_surfaceless_context"}
+  15: {"GL_OES_texture_3D"}
+  15: {"GL_OES_texture_compression_astc"}
+  15: {"GL_OES_texture_cube_map"}
+  15: {"GL_OES_texture_env_crossbar"}
+  15: {"GL_OES_texture_float"}
+  15: {"GL_OES_texture_float_linear"}
+  15: {"GL_OES_texture_half_float"}
+  15: {"GL_OES_texture_half_float_linear"}
+  15: {"GL_OES_texture_mirrored_repeat"}
+  15: {"GL_OES_texture_npot"}
+  15: {"GL_OES_texture_stencil8"}
+  15: {"GL_OES_texture_storage_multisample_2d_array"}
+  15: {"GL_OES_vertex_array_object"}
+  15: {"GL_OES_vertex_half_float"}
+  15: {"GL_OVR_multiview"}
+  15: {"GL_OVR_multiview2"}
+  15: {"GL_OVR_multiview_multisampled_render_to_texture"}
+  15: {"GL_QCOM_alpha_test"}
+  15: {"GL_QCOM_extended_get"}
+  15: {"GL_QCOM_shader_framebuffer_fetch_noncoherent"}
+  15: {"GL_QCOM_texture_foveated"}
+  15: {"GL_QCOM_tiled_rendering"}
+  18: 360
+  19: 0
+  20: 3771199488
+  21: 8
+  26: {
+    1: {"android.hardware.audio.output"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.bluetooth"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.bluetooth_le"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera"}
+    2: 0
+  }
+  26: {
+    1: {
+      12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+      12: 5.735720279860719e169   # 0x632e657261776472i64
+      12: 8.414499393736517e276   # 0x796e612e6172656di64
+    }
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera.autofocus"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera.capability.manual_post_processing"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera.capability.manual_sensor"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera.capability.raw"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera.flash"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.camera.front"}
+    2: 0
+  }
+  26: {
+    1: {
+      12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+      12: 5.735720279860719e169   # 0x632e657261776472i64
+      12: 2.1080362219100268e262  # 0x76656c2e6172656di64
+      12: 2.917895e32i32          # 0x75662e6ci32
+      13:EGROUP
+      13:EGROUP
+    }
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.faketouch"}
+    2: 0
+  }
+  26: {
+    1: {
+      12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+      12: 1.6144617321926332e184  # 0x662e657261776472i64
+      13: 7.358746945031531e223   # 0x6e6972707265676ei64
+      14:EGROUP
+    }
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.location"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.location.gps"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.location.network"}
+    2: 0
+  }
+  26: {
+    1: {
+      12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+      12: 8.382764580288506e217   # 0x6d2e657261776472i64
+      13: 3.9466026192472086e180  # 0x656e6f68706f7263i64
+    }
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.nfc"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.nfc.any"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.nfc.hce"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.nfc.hcef"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.opengles.aep"}
+    2: 0
+  }
+  26: {
+    1: {
+      12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+      12: 1.0134140540861765e242  # 0x722e657261776472i64
+      12: 1.1733908802423856e214  # 0x6c616d726f6e2e6di64
+    }
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.screen.landscape"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.screen.portrait"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.accelerometer"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.compass"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.gyroscope"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.light"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.proximity"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.stepcounter"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.sensor.stepdetector"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.telephony"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.telephony.cdma"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.telephony.gsm"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.touchscreen"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.touchscreen.multitouch"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.touchscreen.multitouch.distinct"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.touchscreen.multitouch.jazzhand"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.usb.accessory"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.usb.host"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.vulkan.compute"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.vulkan.level"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.vulkan.version"}
+    2: 0
+  }
+  26: {
+    1: {"android.hardware.wifi"}
+    2: 0
+  }
+  26: {
+    1: {
+      12: 6.9331381010284776e193  # 0x682e64696f72646ei64
+      12: 1.225142415945115e266   # 0x772e657261776472i64
+      13: 6.4751898111237e170     # 0x63657269642e6966i64
+      14:EGROUP
+    }
+    2: 0
+  }
+  26: {
+    1: {"android.software.activities_on_secondary_displays"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.app_widgets"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.autofill"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.backup"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.cant_save_state"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.companion_device_setup"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.connectionservice"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.cts"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.device_admin"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.file_based_encryption"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.home_screen"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.input_methods"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.live_wallpaper"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.managed_users"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.midi"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.picture_in_picture"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.print"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.securely_removes_users"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.sip"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.sip.voip"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.verified_boot"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.voice_recognizers"}
+    2: 0
+  }
+  26: {
+    1: {"android.software.webview"}
+    2: 0
+  }
+  26: {
+    1: {"com.google.android.apps.dialer.SUPPORTED"}
+    2: 0
+  }
+  26: {
+    1: {"com.google.android.feature.EEA_DEVICE"}
+    2: 0
+  }
+  26: {
+    1: {"com.google.android.feature.WELLBEING"}
+    2: 0
+  }
+  26: {
+    1: {"com.google.android.paid.chrome"}
+    2: 0
+  }
+  26: {
+    1: {"com.google.android.paid.search"}
+    2: 0
+  }
+  26: {
+    1: {"com.nxp.mifare"}
+    2: 0
+  }
+  28: 1
+  30: 2
+}
+19: {"wifi"}
+20: 0
+22: 0
+24: {
+  "Cgb7JzxBBeDSEBMAAET7-QhPJjq-AMol--FoZl2a2gfpBQDroQgSZIbiBNGOqKex91YYv_GDlNeYIZuk"
+  "yOor4zY5pZZAglr-TWSkk5aAM3V26f0Oc1snhjZeWBdRAqkVYqcgwbJJ-Ba4Lv_yVchqm8G9NmtvHfci"
+  "c_WUeVC7IssDy-Kkj0fhIA2S7XyzIxmXF0dn3V3sR6KDBQEcA_arz0jTCch5iJI0liXaNRJvajssirII"
+  "QAJZakDr8-fA1rSPS9dC9vqzm-N5WyGrU_mdPYTeVDSjRP1RaemtaUSPa_T7JTceM34XzOOc95j8ECJm"
+  "s5rRZkfx29r-NFgRpEgTkz76WdxXoZGRCyjiuS-EBdC2olGqKjynYgzpcyk6m2G2QqSuXbdBuDz8iCgM"
+  "mFiqWUSXfg8U8MB4x4zbS63nbVAy2WJsR2go1uxYbZq-2HHG4qaLiwQ6jKNsKYKQqhgWasnIyX_myyZG"
+  "OIbincrIbsJWyc20Ul_umBaRQBy0BH3IUAtG3OXFj2o1TiHHtedQBIPjUuufKXcUCp0vTDZuGXw53eeM"
+  "vZ2GZDoA_6X621G4LRLLeww4ITenMiGPY15TA7AXbCCRsS0yVG8AugnOf3dKb-XGQ36VC7sk1QTyE_yl"
+  "qkDT4wem-SfH3rAM46fHkyG5eZWbJHWeJRB076YbgY9gKt6SwytKIDmDk8iTxm73HnMqE_yREE9mOqAA"
+  "Va1Bb05zBBXyQVZ80FazzGoy8VeiJHUT70QMI3ks25FLOiyKI_TvLt52ZTj4PrPwgDVaivm5Yf1Imhcs"
+  "dOX2JgrY7x_e5e-nSo4vnFuIA-uKmPgqZDFmyN8gja2bdMFfbZc0P98y0V3cSWJ1OfJy2F6E-uP5902F"
+  "3QRn2piXq120-4zQQCGLZk9QWqiW0EMo5WLioeP-nmxetG-5zRkXzFRysShdcbF2bD4oHn53__LuGRU0"
+  "qdlcyBzNCmyvK3CFKpaA_J-yjNRTczkScI9QLxDyCYyVG08tEDhOSoQGinSk_ax2xNUPKa_cCRsSPhc4"
+  "YdAP0a2boJX-7-cZ6AHz66TpA-gBnufIHzhrOEsStUR66pwOMBYpTl7ni_5vibqU8y0WhlY7Cv8XEdoI"
+  "qubecxDBewfY79noUMxRA1wLmw7hdeSd7WptQQT4ktefeRv1_vZnbHRAKO0Fj-as3WtvtsPRj7XUBRwB"
+  "5qk0ApMvPz9EbruqSzhovSn6c8XA1d3wct0sdAntZqzrn0ZzHshQ2ZiF1y_7UFDm1gA86h2eBBeyxT59"
+  "6vhE1n3bw1k3Sc8vbStoQr5GlPtK-GnFtRot-vjr9d-u3Tq2WtbgkRFu2FjBhrUVfQ4N92p1Zgt7WkLx"
+  "wVIdkt0mv40beDHsO52dBsCkncaJMgTywgpALA8IPJ2pA4tKvdZtoazmnGPu68QV3p9w-kqfQUFuREjs"
+  "yljX6L0DBvMU5R1sGZ1HEcImu4lwO9Q8NCgMJr6q9D3qwAzVc4vfHl1VIfsJP3NjOqr4tUilPrOrTsPk"
+  "DGg_ZEFpOseh04itQopCUMKmK8I0vwFYYJ58gjw7ffp1OP_sp4qGkolm1qiOXKPM3wzmzGcOFZVwSQvw"
+  "tGiDACBVJwBXZuoGtLEfKHG3teLzM-MFs1pV0sloydZHgbF9kLOXGDdduGmGrVWnm5lXTq0vw4eqTa6w"
+  "7MN-q4UbhHUrupq5eBP-_E_S6koAEELE1dCgKDVdpGyMKCX8q4FgSB2flQwyGdAbxiKYyKepCNEMrMqu"
+  "pASaUmlQ_9Q1745gg-3jBaJIi54VD32l89HuZtxLropwSRKN39Ih-g8cN-qtmJ8ESX4mGaTGAv0UPqMq"
+  "ROl1Wj6IDjvSe4hzeTVhU50X_cxWTiJAiCIbm60Wlx3OSf59Y1AkpzEto46LksCjd4MWdZmBxrIkmebi"
+  "J20uJ2NpBYnDAWWlolbtmLFOJ6MOUJfqRkj6r_RYGtWpTrfHpxBQFC7yiK6qqAs8QcODF6wBg9_2F82d"
+  "EOZa3dFg3Qpw3JFrPXWEW0_GJ9mwzu4IMbYQsl1MPeIxtGLVo6wvPNdRgkToahP8dBMK-zx2n58SiIQ8"
+  "-YEkmhi2wbg-6le3P2PR6adzBjnUD7HpSBdKV-fJiqDL76CQ-h0KJOH0ZU3u0dC1SNdOVrw4QOMQMk2i"
+  "ABhob0GkSwwi_e3R3YCV-WWPJoRZKx-_e_jENx5z3CFYKnC0cs-LVvZAx3371DqmCKBoKkbg5sGpynX4"
+  "ClTce2xwlqL4StOtz-58p2teaF7i-KvkE5n76QdCqLS58081rE_ROtO4uTA8u5hiBvsYaitOX5DYV7ue"
+  "gMmj0bvKtjSloj83SIHB3eegXq3Iuf3Kg0WjaoDJdGnPqbGqVQDr4-5glGpj_6815pE_HBQMNXFfQqMv"
+  "EcWUmlOGvcOam88wWTxxeLDaMDj3sH-da6ARv3b1HRcn0aVXhqwF8IbaTjRW3XA2TnKp2_cgmaWeT1m9"
+  "C3RDu_nfc3Mf5NOezYmPkRy-N668v79nOjIMmUOu4zmJNPr-Wud0aqKwrr9_GxnGLwr6ZhaO32JO4Yjn"
+  "lphs4aaqvh0P-hUnmgm989jzZkiBOwvk2ajqYYPAJdxDBWLthg6dh9b5tA8Y7arw8TAxxi2cejY2BJFz"
+  "8pL-nn3L2_HcUX-ShrQuY9O7wje_ki0b25ah-xWzdSeN9sDYUN46rjafPF7F2qiQzO2qYJCMosMy-x5p"
+  "zRxXbhITA2HRkyBCivsnfkPBRBP_GdQJD1nJ_yyyH-xMuSRErAkp1HHKfjc_a_ZAnOkPnPuxMChR5iDJ"
+  "-Vxxr_PadaoI7enLsuH3Jo5oS9wtPY9vFmgbtuihQkRzGj4cfdYhA4MW6LAJZqQikRH1Dk8JCsP-SgMV"
+  "Ajxcsrs8FS-S4iDV8NsSkmVjG7YSJtF93hmTNiF6lXB5gfi4qd_tyEiq86wl1MD6YQRPFD3-dhUWvHwR"
+  "WL-9esWPwVuZSO8XcsjutWstii-JDjUeCl_OxCU7A01kpLNEOjnEcrCU960hKinOrcqyxhWnD1DInWVh"
+  "5Lmj3ZM0Xhg9X8ncuyQviK_yC2ZpwRkbma0Rzz_jpisYLYLfQCDQvgYi5Zfq-h4XY0mMw01RzhcIq077"
+  "y0Jlr7mn86-GlDFBdReuhu7PAXntBVRNpIkIvtpHcIKjaa39yyDI3E_WwO77B-B5FsFY8hlHxyGvMYkF"
+  "Fd6Lt5Fs4Njr9JRAzOLkN-ZVy3K_o4DHZmYE6Hue_WDECbbiE4zkF-XLJRx0d4EPjevLpscc3rmnW4yc"
+  "FOa46aCUAgz9UDovBG2b1brZIjDL-9MMhv3kLyT5fscFHNGztHkwROl-0QYJOEgyg73HR9hPaYwi8XiG"
+  "ZDKSwB7UNB5hy2PzW1zcNoMlY1x7F4vXc6rKkrtFyUnN9MgFWRwZXB_CFTUBXP8G6TgQNyt1nz_zA7CT"
+  "kISRkyX9oFIvozhhhYbZsr90_neZiLAmqpb-HrchIdbMMLROyJGIXXaHBYIzy7PBVUA1RznnJ9gULBa2"
+  "qZivOsM9mfOmBGQDvkS23s5Nhp-xOLCaBpATrWAY88sNn8Yf3XAglav3e9sEq7NxtGoHPsXeI1cnHXpp"
+  "2SMNxABNWpXK7VNc82dR2wuEHS53D4ptpA_7SLKpeDf65tfKFDoo05wcsd008DDjeW5TKgfWFzQPraNP"
+  "RFzu8xOPncVEVOh2QQVofGbkNNwesPmCfpIxhsireVxLda3aLq9NHs0EjxkEm-ut1N4jJqzNAeSKrZaU"
+  "YRna-ZPGWTDP--blK57fIxpQfZzpi20397gDM5Xu5KOiwvA7B11fBv_czlTmqRmAMijlm2akQ7J0vZjG"
+  "-JR46la7lB3ubxnHdmidlWqDTIJO8y4651d8nf8D0485g1ybO3XwexWdBQsOQhXvWmd0VRgn7PALKnut"
+  "5jw9FBH-eb4NH2rNUH6r_b7ASmkrpnkmLOJvhvD9gNvCRcVuL41il1LVOuR0QKRAvFo-D6FxA_JaqQK-"
+  "4DSP_7tllLeYuT1LvzZt_gY_OGRYtXFiHmJaqng6Agx_-9bURLC6UVPCRcvZEK_OrH67s7K3uiLDXEmv"
+  "LEqOoMmIsinwBkGGnl0KoS2FbeC9bKAqf89C0_i_jsPxKViAVBlVG42P3w2oKef4yXmyVPln6Q9vLNns"
+  "HizD77ecV7A611PcxIi3fCXHF5bxKvvCTx1iAio7ayvHST29xXhP9WGfmN5gLs7dy4fhrZjAhRmEzj0E"
+  "haov3hx87p-GJ92Mn3-_4Clu9AaP_EfmGKqmVZHpZQgwJVoOv-PoIa4t0mjpX0tHEXUQz6cfLNfOV5KB"
+  "aP_6ffA0rO13mnCTj-BbQ8bOwEHhf0zkASDlk2_knsdYbR92Mkhs2PuFodwjHcw_xcpDtaPQtiBrIVzv"
+  "XpJgKLDD-mFrHbiEZjDMELyYqxr8y93nH6Bs3er-0gscoqEsazrVQ61gYVUvv0ANny6uo3MPoQbGJNDZ"
+  "tbwJzobMMci1dXs_-0otx22_cSaRWMGC0QsnTQac8FXcwPvwms3x8Tb8hVBHn-mg9nUS9HWBMxwIsCFg"
+  "5mPxQrQGsQ21fayJdQhzS1_ILZdNUNOacZLtMfyyMaoXj97U038DiaR7oZqguhFEVGEui96uByfAqJz7"
+  "ruiSMhmAOb7itq47Z0qXCDb0gHCl3kgqjicvuiYJHNOVdjmJMakSmTuoXzM9kknpBEboBXqCZJB1XOya"
+  "L-9ROnXzKfd99klLp6RNzVWCm2i29ulTbhsx2T5719gkruxOu3sFYrTyyYVXQddAGY4J30LHh0YTPjm1"
+  "8LGu9whur1-8dduCrUlIMIStlN4vfiFar-5mveBE6PZEy3mONzyxgoUQABEOBH2PDhfMZSn9isb9j7ow"
+  "nbPyBuu29T6LOP__TAiruW1AULEPIZck535s_FyrapTikSvRDabTUmj2i6yOH2-eNrXqNQCJsVGZV9-a"
+  "sLKUyxTs0OiiMRj-FuxgSNmvqzQnOru3nseu7GreUk96LmaulBAKDjU38Dw28rQQVXBRtViz7q_eaogr"
+  "WoD0OedPBjN3hmAQEajXrryLeBpusq8NyYrrMErH0Qazjs7O33kLPfzknmZydm-fBRA2BY_5W8XQvgKP"
+  "aHCXNxGKSAt1nh1wwTgE-WuNHxxWdl4UxVe2Ltp0DH1E2KVef619nEpPMRGCmlerdImhymC8ji6izirS"
+  "3zyeyCtU1siOyYuXekwtb0UBgjYNRc-qgtL0sYkVfvs89GefXdYkooC3rEzGVwGr8kAtqGIx4jrKpmzx"
+  "c7TspDHKyweniTUeQD34PDEZ7TRHddWg4EqVlGvhRezyTwl1-C1ux2ppOoh99GDkYsWvW1Ki2ZfkwfZj"
+  "eGOe7Bt7nzfHRz0rVPJhA4gQY3kGX1EzWcfu-OotqO-Zb8VyucA3YWfY19XvnzsvbrDRBVMgRSrpNa6m"
+  "lsSk0EfWu1xL24x7xg9hRfVa-2W_SZC-cRch4qjTeYQoI_EfmSJlHZqnEo9tFIczaggb51C8byPAU96b"
+  "f9yMZSvgmp9VsRUoAolwDt2epZaTBsaxt9I4IdRaKv4PJa89_wZCLDoXrhqfdbwLH_k4bvELAto9J3pe"
+  "WQhShTGLiqnoCZanhHt4KNLeLVRMeLAXijHMtzUZ1S7m8oUa5E0UsuYiKW1XGBAJz759ujYwlwhLNT52"
+  "Ka13vglQb5nUUmMe0KfYJWN3gTRteUQNjMWs-9gUJoXVpiPQpmx1GI7hSjp_XllmytZLOsTuv4E5Ai4s"
+  "2Cetk3FdvQRIpyevxhEuGXXt08uvC-F96YtTJv2sHgMM5pnj9VXDdabokLc4GAPH3n4BvWTRpdxgufWQ"
+  "cKOEAj_bhGFIMI59QPK3tPSV_t-deK2cS4ugKuihXy1U5z9EUSfOMPesOiXNFC1iko72-ldLOO08LiUs"
+  "mWgFvP0Uk1JpyR3wQg3mn-S7w6BCrUTvcc9upMt9ZI_Tv7GFS_tslJ_d0FeV1Rzn34QEEeo76DeovYwP"
+  "IKObaQ1dViGg9-XyYwp9-fawKrBUcSofFy6cXfMl3eYJAKO2jUPzq8kIsk-xSHmPCA0iGzHhKf2rrEO_"
+  "AR4Vb0Tk6B5-2H49pp6LhewRFGbJliyqbdtGGglUnoCB1sFU0nIyaG0qMjnXYZY3oEGvhqnNA9qe0k8f"
+  "pzli9iadt_q09HYAY7QpWBZ3btb2KD4lp6Xtw75GvZRtBU9V5TCfKQ4NHz39swFlqeJUzSL4rDsotlWA"
+  "Dii7MHYStMW0xrVEG11xHHqy0eY3s2RGR6ZJWem-QWdR8DAVWaeo_VYrnt-1fOepMgD_3oAhUoW0LiOy"
+  "_O6U79nfY4jFKtFm0Im2MLQeJHU0W0YNhrHXIKY8s5R2KNz19xJWmqh5UPgZNCRsdEWxZJwPBMwc3uCz"
+  "P3Hobw1E4qoNorEP0kR7qeOd2T0SbdQmyO1YHZWvpVduumAalMJfc5miVvKlb5QNqWkvQyGxLJ1Rg-LV"
+  "qtTp_w-vG6QeSoaLzKcbc6_VQVd-M3ci6vDJeuQop5lcluqlf-W3fSblYkKeLARzl9vaeqBYwicMZcsK"
+  "20_9od1OvUxf106_20Z6ojNLmp9e9zAFDTV0_vNvDoRu860bn8jxqvavdn_WdCPLgLByS7OBGNaL3RAa"
+  "pdfyUyJhgHjX-x6YoPkNQ2Z7KTmJ96R2SyOTUrJQwJCkE6BvnJj073SowJVsyCxtf6rTZIUR6tHJPmOf"
+  "jN6BGwDvXSsELdY2SkSRloC8tW00yZX3B3CWorbmf5_2GQ685pTaZS3CUfhdt7xdSX52RN4NfBZ1IZAZ"
+  "dO7fylL0Nqh13ppZku7yC2HzHFvuKUy-TLErfjni0EuNcCJ0NMG_o4DDMSr1laGtTtkAoXjGPynPZC_r"
+  "LwwyayQDcH-tZpoQKCpsE_95Eu2z8U2kMA4RyX9IvUiDoovEgp1pQNu1pfDatl--uWjLND9GYUchm8xm"
+  "aQX8gRHW8u8SwczM7VtTiamLQP-6gItz75bNNxkxsS175mmRrgNI36fmbZaYINzzzxFmIAfsy8MHWnZd"
+  "SvkuYQB3aUQRxINSBolu34LzFqBQZsOFwsl6LLJe7dLDW52Tlgmc_w2wqjOUKm4MccWw200bs5IjofMZ"
+  "MSFqcYWjVcpvmfVlNDm7NzD35CPyBftwCOmLhXsNwZMhBQGRVRzwoibOtEHE4z1e8IOd0JpOqvbWGXTG"
+  "kxY7Z27QF5lD2kd7h__6411vmxx6vOjDXHbRP_5AY8y_up83IkvLnplK56jaUSMETImsyRVOCTRqXSdJ"
+  "dMJz8j4LD_a2ZPTYyulyArEfABRKxI1lP_shJr7puXXtyp55TpWRnIGHI9FPbJaoB7CnJTN1AtQMKDXQ"
+  "_6ZgPoUecrxbm1GKp31XNSMgl1pcMOgikeEqbU-27a5VtST3OB4DcVxxs8v5b8lWTOkYn9dN60y33jSg"
+  "-uku0j5RxkzvZdWlS0Gztb9Kyy0iZJbAFoYnPG5vIaHJSvxEyWbT5Mumi3O1SMsVvNwGBttbV7Q5VmgI"
+  "2H0Q5YKi1BO53_Xl_MyD09E9bezGE-sC_1INOiaHq_tLAZRcghbp9Zw2ot-JDWfb9f2ej2ffBiTIOj49"
+  "RsAkeQhd8aqwbyKfvLS5-hob1O24mXCkClJ3fijOaXQIV_o2gG-P6R-uJ9-t6QQSdZf99p27DuGbwaK2"
+  "hb9_jDvRfGU_xu2aMtrMY7b3BY3qnqqCAIWPOv79sKA2YG8fRo0KnjcG0pajPtDxtBBSi1hWgllIYQlY"
+  "Q4F3VI2vDXonyJnNrvdjWkkMVdud6NOUzUD_gE697zwGNNJ_RA1Daiix7DoUXxWkyBcu3M0QlRBsahTn"
+  "-9lHme33tpyNGKBcK1_amSv6XmgrekGD1ThocGdVFQZr4Sn1EJEw_ScIkCmX32U26Z9yaxvNAtsLv3H7"
+  "DpvmRNWjHvRc58JUB423YDsKrEIBYtsXSR_Gv5Kqt9pEWyPEG6oHlKRxqdmhLvgw5dc8M4nzGbJ7G3pr"
+  "2wyzVPkRz2Us_ieh8_MgYnVqQYecZuaAR9E3QQ7IY5IWHJYZaPjp7Oe_46Fke7aZsAilhF9_dg1RIUAN"
+  "wTjFZ1tLa9IeBTwFZkZ4Fnmk0-Ajb8PSvbejO1w83_0A_dH_aHvAq_jWz-Lo3mxPz2SJlgOah88kp08W"
+  "0qGrxg0g4lVQa_0qAZ51oEczP3PVeQDhg7VDXXRhG6nUDkSbOhvfgV6jI15BlI7Bql0UcinmfzEwZ-l6"
+  "eReF9Wdi2pz0UtWEE544GNc1RKWpxHLXY6_idNg9qtSPqQp-UeQkLjO1CfYi3eOWJwFt4Ra2Hwvsm7w9"
+  "4Y1yYRvbMztfKuMN1hL1w9ABUW7EFJn6_X2o4HiZRM8NefrV0ad_ASrgPKcSp1_TwT1RYMJm05TKPYgU"
+  "4faRNRGe0q50oppg0Nyd1J_IN9PZU4MGwrwo4fcE55xpW70frzYzajXi5uR78V3JSV8TNZ9hLZ9A2_wo"
+  "DcNG7zeBfQFWtemZJ0qQUgMbX9kvJpLmwveIrJp4RTLcI9RDpg8e66s48jikItoBWuZr3c_aBmSzSaTj"
+  "9TAVa1gyk7A7lVnI3wBDnCtpQA1ukDdwfA_II360Q2J1JPnmYl5lbDsJhO7VhpmUPPGY9kFF9i__qNTg"
+  "spm9QvG_ZNWBgD-PaItPshoKpjeei49gG1aaV1fXRYFzuIc_R85NAJxGfalx41cfXKy5aA_KcuEd0NcK"
+  "8BHMCBwm2SBlWT3FsmQLHbLVCSI6GsZOK3TkefrFROsWiE4l3uOEkVk7K3q860jc6VDJkm7L0kqKb2t2"
+  "IqcIk1NJFBOuT8x7Wl8rh49O6W_pvOd8X0OHZ0gRIPCeJIMlFfPdr1fmRiJBZhMPRwibHYSubrD3I_Jz"
+  "Y-aVdpeCPzsOELva_0m1ctndn1f2m3mGKOQDzB2Jzra_U4hZr8jBGLhc8HM4t7_zVOBX4sf8o4-EsxDj"
+  "AV_0Kvj8hGUZcrbUtfk3Duv9CIOfRxV3ibZVKgWk3Y-GI9s9DjxHT-lFXz4lqmV1TrdA0E-DefSJvNAV"
+  "qi1ojmh65M4pnT7fV4EwL4xvLsx7McpSYV-_7XUmGEWe_9h4Hu40iRDWwSY8ev-T4KD9CEnqXczA6Xg9"
+  "gq_W50q9j-mAW_dfVUCeR9xl9yykWJBjoo7K2Hm4hTjePVDlCSNFNxDAqfJjbkeSfUjb2trTycGBRV52"
+  "6x8uVvzWTsSO_MNao4bw6FRtVk4Jmzi5JAcjMt0NV45Gk4zU-PVW1ZHXw-rmmeYWn5FUOI1nqW7IEY7f"
+  "wGyJi1UtqhwIcxztWRW3k7CxHGH_GQSAJfnOqISAuH_IpqKqKQHAE4Mis9TyuR9id-5ZywN7QE3eIkIe"
+  "RzCskPnIvY__C8xhJSFPpfqw_ZQxaliCGc5vLH-RF-MJeZ22ZJBMKxJQws7c7WpusEUVMPODZFVmQ0d3"
+  "v-sbfXLbwM7yjx8aV517CDhO1rR1k7sqqiOnP0X3v6eipxW67jFqrEbQBVQA_N1-j6Uob0kXjkrU4M09"
+  "LLoq1XbZml10Mc4_oZ5ZB-YfVNPuR6LZkAZ7Kwm8-2OpoqbCHDSLl9-5LcyqOIATvgaq_vhAaPkjG7wA"
+  "1TIf0DDur4NnXIBJlTK0rqHhr_1dvRZeJikkWmSG7P27cHzr5OjGX71LdBUT2lqq5BsTCc3HSMdokrGp"
+  "-uKWsgIfboQ_LNtb4D9CXwOEMPcSHb1vknVhiaKvJ8xOq3auadLiR74XlUXUiLdPK33t8ksSKyGpDCfL"
+  "X30znR85K4uR1wTSjA0JWhed045U2Xuu6XPKFMftpxfWl7bVtvF7IJ_kKPK48RY4PcKHwi2d8D32Ep0-"
+  "IoIAahaAGmGPTjZ2EJYuFkGirntwHtk6NqwAVjB9zhXAk3vCK3D508EqV7bK1kuLt1mEJjI1qWjSaZsY"
+  "Skxe5I5wK288k7fC5kGjMQM-ZdrrMr2ify3E-pV7UISoSPgvz7pl58ty1mkQAMJMJi0E-I_TjNefsV8j"
+  "hrxplLRbCWRctaKtZBk_ffv69wFn9H9BwKg3_S2634HcFHtKeVbFiHz-NA2aJip2KUTgQsbWIXvgFrDL"
+  "hJLXRiUIU_yCe4KVd8tRK9GaS4uzkSgYIUC_vB53JdCHcMOTomhIsM11WxBMdxlUlScIX1gPnDV2CslM"
+  "CM0joD8JARsbfvnOp5jtO8-O-YwhPR7uzPy0X1FjHsolOK2wxDL7NZWpA9dV6RaaOO5Bgha8O9n3aPh2"
+  "TCjK_gn3mwYYSNaqO_BY8HP5h0PLYoUov0oOPUbms5FiGr_ysUPUS8pyI20ed5Gy7a08CvMfWzCu8DqN"
+  "ZEtiuez3G6arXM50RDIJdpJCYpDxpOopMxTvGw4YebotrRHMqyTq2ggDnkHlRobCRSTfa4zpCSen0gJw"
+  "CDYvS0Coqkf5WKmsJ-mHtzu_XSq-TuT8kXiHBc6YKuLwH5xB69dhlnK3OqW-6w0xMCc1YjZfHxo1SXB8"
+  "9mWVp_aUK1q5LGpxnemEhTKi0b0C-rEfl2gKhkSSvoj0ZrIEVsAyd-chj-cIwnh4x59iJnaSa0VFVhMA"
+  "qb-ZvriWwLYBO-CXLjEU9gPOuWj8Is_sve00frVExrfrr3jqkpI7y8KgBABuRTLv1lzK-BW_St9aTufz"
+  "wmCQFqz9bBerMRgbOo6KGefh-k_WbIKKkv8onmFT0-LlIi4vAnmpYpZPdyz3AfgSARj74dwVohCB-3_5"
+  "hEudLWlOKHJb9lLk2KBoTxP8ORMgGDSg-t_g3LvngCquwVthlC_uFJtThA61j5Hn7jwLfPOopVwYsaV8"
+  "SWJv64J5C6M9YQEQ5zjlu3LQ2CF4CN3c5mkR5bubx3VCUdoDp6XcR7JVjg0s7mn43FzuebT1Qm_CgaG4"
+  "Fn3S-brY8PRYoywP70lm0gBVE1ogJ8wMpo4ChkooK5OudZRBtFYDDyAV67_WSvsmkvCzM5eo8rpXTP2p"
+  "2NnfZJwdeedCFxj-n40wgu9XdWnUK2ZparylZvBqNn0ar2q2aYha0r_SdQFT1jaUWmk6iCOAEzOCMq3z"
+  "_LWmNzrO9xgtnGsC1BbAZo6mO472ViJZhzgi86CgVXmV_x-xXTwwtXLrOrIDRCUpwm7fWgDiktKRKeWh"
+  "xI98IwHPtljzWIf1nMfYz8gnyzPdDTBoeKR_YlBOB0Ei1wCQ96ae6zimWv7EwSZytb3XLlRhQLMJmI3c"
+  "rGh0CLZhvjDpT7WJyWwV2ZWX4ogbUf77JzaWRp2dSYbBddnDQr0vJsUuLry8l-XJKHUxTU9S73gWAGtD"
+  "NKBUxAG0o-Bcc23Ovqvw3WwnuZlv4pAO6hnNbD1E9Jz3FART0FHXFF26tAH2Jq6Rcf_WkLd7yVT-gGqy"
+  "amzCDiLDrFmL1YbTuVi2FFoSbCV85X-7x4fhqAhLcSjVa3TfCygRkPIqArKjJ6-V92Zab-Uox5zADL45"
+  "OUicvv3EKarSOkOGLl4fRINSPHLGcgD5nCKdeZCrmInYM0kctZ1E1_7UtbEVMiwBoDPhpIZnPoeesOJc"
+  "VVXhVtLW4vLTXRrIylCIXgzFT8Bu4y4x9ro0AAAeeKnCmw1ZYvdTeFtgLxv7wwLWjgGqz3BdrrMJoOch"
+  "heyMPDMHZHnb9dWsV_qtvSEAC1yol-p-f7clqDaNeAApN5v-yH8J-sS_H6lvgLDszWyVOcPWn0m6EloE"
+  "cnKbwD-RMCo5Ijt7rP7Z9h8iubR4-PRWaVjnfXmkda9nU2Iwu0OVHDCFecKo9mccwP6w4f7Rjz-u7iB6"
+  "zl1Vh5DqxaOIQnniPr5GO4XDLkCqTkaM_VGpVYa-b7UYavQyWpPEdVObvW6lYDxnVF3R7-Ww45BZMKG1"
+  "Yhcrw8lDYyUiO99NcXR7Hxzb8toZn0cLNa2wVX-lXEa0pZOnGAWY8MusOJnFXCDldGOn0sUxMQjrk9UF"
+  "M83zQM5r-lDPX_MEpQd6dXMFr0d3TrAnpD8h5thNVlZvraGZuX6q5suvyv6htpEICDy5nPTVIFajeygl"
+  "bTcUTgJsuieDnyU-y_vCyT6IVk7FNwQD1jqCk5JlCvPiYpYbE_F77gZtrIEV476zdz62DKk5BOHpHrNs"
+  "IvaO6ns45BASPcHFCxcvMMawmIR5ut1t__qdQ8BgMCRZtRxo4YNvNcpdnhw-IqDU6UFMIVehv6BSndc2"
+  "gaUYewZRRlbtmh_bgMMA-LkMjGj0QexBZg_Be-QDQmijJDSDh3GjD4-uYkeFFKhMLDx_Dt7DJmePkX0T"
+  "eaL-41TSKDGjNURdtTzZYcbfUIRAyzXANFG4qXDg8n5wtpKTDkJnsiOApeZoS4lWhhMxxECl6Ho_Nnb2"
+  "qpnRa0csDPRfSP7yNqc1ymtOZcY0wJXKyXlQIb_V8o3DaysMhhNPPSNJVuI46dJhe1Ta1pFLFpwbSWeV"
+  "gBVDZF9bVRZFornJzqIwdKvFYk3hcqMa0FvsT_WwOu_v8gCwO904FZanzmLlxFYIUfsI9Ju53kFW1SqR"
+  "MQ3EA0ul_GK1zb26tdTLM_7YsCn3WgVVOToHYkezAqHFA5fbrYzpliXq7wRC9QvhP6rAx8fhQ7Bo1iDs"
+  "-cJd2XtgLHEqx6tZwLV-LnWlgDHfhl9IDXQDEPDmUmhwfhaFpU2ftRBjPWo0Xyepz3jW8he54ERI3fcC"
+  "5G7rC-5jFuw6HNIOwYCNfcAXzi7XyVVxKgnk1rnbLQ2YbzspT5wfVrh2U57Tn9CUk6rGEzISZ0ogu4AI"
+  "kQltMJM3TGfVLKJFrKyN6r41ORN3IMfX99gsnNGqECAF5y_0VkHjxjd315bq__odv66ef_4fa8kavY_6"
+  "i_bLDw"
+}
+29: 0
+30: 0
