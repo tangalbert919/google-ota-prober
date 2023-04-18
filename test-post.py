@@ -223,7 +223,7 @@ payload.otaCert.append('lIbs5KNFXmSDFVsGAYhR5r5I/ig=')
 payload.serialNumber = serial
 payload.deviceConfiguration.CopyFrom(deviceconfig)
 payload.macAddrType.append('wifi')
-payload.fragment = 1
+payload.fragment = 0
 payload.userSerialNumber = 0
 payload.droidguardResult = ''
 payload.fetchSystemUpdates = 1
