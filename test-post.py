@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 from checkin import checkin_generator_pb2
+from utils import functions
 import requests
 import gzip
 import random
@@ -17,12 +18,7 @@ model = ''
 device = ''
 oem = ''
 product = ''
-imei = ''
-serial = ''
 radio = ''
-
-def generateMac():
-    return binascii.b2a_hex(os.urandom(6))
 
 headers = {
     'accept-encoding': 'gzip, deflate',
@@ -211,17 +207,17 @@ deviceconfig.smallestScreenWidthDP = 320
 deviceconfig.unknown30 = 2
 
 # Generate the payload
-payload.imei = imei
+payload.imei = functions.generateImei()
 payload.id = 0
-payload.digest = '1-9a48c8e36147f3b9a0d78f017a5b31759777683c'
+payload.digest = functions.generateDigest()
 payload.checkin.CopyFrom(checkinproto)
 payload.locale = 'en-US'
 payload.loggingId = int(random.random() * 1000000000)
-payload.macAddr.append(generateMac())
+payload.macAddr.append(functions.generateMac())
 payload.timeZone = 'America/New_York'
 payload.version = 3
 payload.otaCert.append('lIbs5KNFXmSDFVsGAYhR5r5I/ig=')
-payload.serialNumber = serial
+payload.serialNumber = functions.generateSerial()
 payload.deviceConfiguration.CopyFrom(deviceconfig)
 payload.macAddrType.append('wifi')
 payload.fragment = 0
