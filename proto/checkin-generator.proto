@@ -116,7 +116,37 @@ message AndroidCheckinRequest {
   optional int32 fragment = 20;
   optional string userName = 21;
   optional int32 userSerialNumber = 22;
-  optional string unknown24 = 24;
-  optional int32 unknown29 = 29;
+  optional string droidguardResult = 24;
+  optional int32 fetchSystemUpdates = 29;
   optional int32 unknown30 = 30;
+}
+
+message AndroidCheckinResponse {
+    optional bool statsOk = 1;
+    repeated AndroidIntentProto intent = 2;
+    optional int64 timeMsec = 3;
+    optional string digest = 4;
+    repeated GservicesSetting setting = 5;
+    optional bool marketOk = 6;
+    optional fixed64 androidId = 7;
+    optional fixed64 securityToken = 8;
+    optional bool settingsDiff = 9;
+    repeated string deleteSetting = 10;
+    optional string deviceDataVersionInfo = 12;
+}
+
+message AndroidIntentProto {
+    optional string action = 1;
+    optional string dataUri = 2;
+    optional string mimeType = 3;
+    optional string javaClass = 4;
+    repeated group Extra = 5 {
+        optional string name = 6;
+        optional string value = 7;
+    }
+}
+
+message GservicesSetting {
+    optional bytes name = 1;
+    optional bytes value = 2;
 }

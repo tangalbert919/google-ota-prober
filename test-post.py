@@ -211,6 +211,7 @@ deviceconfig.unknown30 = 2
 
 # Generate the payload
 payload.imei = imei
+payload.id = 0
 payload.digest = '1-9a48c8e36147f3b9a0d78f017a5b31759777683c'
 payload.checkin.CopyFrom(checkinproto)
 payload.locale = 'en-US'
@@ -224,8 +225,8 @@ payload.deviceConfiguration.CopyFrom(deviceconfig)
 payload.macAddrType.append('wifi')
 payload.fragment = 1
 payload.userSerialNumber = 0
-payload.unknown24 = ''
-payload.unknown29 = 1
+payload.droidguardResult = ''
+payload.fetchSystemUpdates = 1
 payload.unknown30 = 0
 
 with open('test_data.txt', 'wb') as f:
