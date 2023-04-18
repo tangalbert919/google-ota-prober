@@ -13,7 +13,8 @@ current_build = ''
 current_incremental = ''
 security_patch = ''
 android_version = ''
-current_model = ''
+model = ''
+device = ''
 oem = ''
 product = ''
 imei = ''
@@ -27,7 +28,7 @@ headers = {
     'accept-encoding': 'gzip, deflate',
     'content-encoding': 'gzip',
     'content-type': 'application/x-protobuffer',
-    'user-agent': f'Dalvik/2.1.0 (Linux; U; Android {android_version}; {current_model} Build/{current_build})'
+    'user-agent': f'Dalvik/2.1.0 (Linux; U; Android {android_version}; {model} Build/{current_build})'
 }
 
 checkinproto = checkin_generator_pb2.AndroidCheckinProto()
@@ -40,7 +41,7 @@ build = checkin_generator_pb2.AndroidBuildProto()
 reason = checkin_generator_pb2.AndroidCheckinReasonProto()
 
 # Add build properties
-build.id = f'{oem}/{product}/{product}:{android_version}/{current_build}/{current_incremental}:user/release-keys' # Put the build fingerprint here
+build.id = f'{oem}/{product}/{device}:{android_version}/{current_build}/{current_incremental}:user/release-keys' # Put the build fingerprint here
 build.hardware = 'qcom'
 build.brand = oem
 build.radio = radio
@@ -48,9 +49,9 @@ build.bootloader = 'unknown'
 build.clientId = f'android-{oem.lower()}' # Usually "android-<oem>", e.g. android-oneplus
 build.timestamp = 0
 build.googleServices = 8768315 # Actually version code for google services framework
-build.device = product
+build.device = device
 build.sdkVersion = 30
-build.model = current_model
+build.model = model
 build.manufacturer = oem
 build.product = product
 build.otaInstalled = False
