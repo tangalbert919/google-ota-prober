@@ -1,0 +1,3 @@
+test_data.txt
+*.gz
+__pycache__
