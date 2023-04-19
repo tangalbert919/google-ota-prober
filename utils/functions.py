@@ -13,4 +13,4 @@ def generateSerial():
 
 def generateDigest():
     digest = [random.choice('0123456789abcdef') for _ in range(40)]
-    return '1-'.join(digest)
+    return '1-' + ''.join(digest)
