@@ -8,16 +8,19 @@ import random
 import shutil
 import os
 import binascii
+import yaml
 
-# Fill this in with the information you need
-current_build = ''
-current_incremental = ''
-security_patch = ''
-android_version = ''
-model = ''
-device = ''
-oem = ''
-product = ''
+with open('config.yml', 'r') as file:
+    config = yaml.safe_load(file)
+
+current_build = config['build_tag']
+current_incremental = config['incremental']
+security_patch = '2022-11-05'
+android_version = config['android_version']
+model = config['model']
+device = config['device']
+oem = config['oem']
+product = config['product']
 radio = ''
 
 headers = {
