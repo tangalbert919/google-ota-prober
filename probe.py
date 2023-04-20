@@ -31,6 +31,7 @@ headers = {
 checkinproto = checkin_generator_pb2.AndroidCheckinProto()
 payload = checkin_generator_pb2.AndroidCheckinRequest()
 build = checkin_generator_pb2.AndroidBuildProto()
+response = checkin_generator_pb2.AndroidCheckinResponse()
 
 # Add build properties
 build.id = f'{oem}/{product}/{device}:{android_version}/{current_build}/{current_incremental}:user/release-keys' # Put the build fingerprint here
@@ -73,8 +74,14 @@ with open('test_data.txt', 'rb') as f_in:
 
 post_data = open('test_data.gz', 'rb')
 r = requests.post('https://android.googleapis.com/checkin', data=post_data, headers=headers)
-with open('test_response', 'w') as result:
-    result.write(r.text)
+with open('test_response', 'wb') as result:
+    result.write(r.content)
     result.close()
+
+with open('test_response', 'rb') as f:
+    response.ParseFromString(f.read())
+    for entry in response.setting:
+        if b'https://android.googleapis.com' in entry.value:
+            print("OTA URL obtained: " + entry.value.decode())
 #print(r.text)
-print(r.headers)
+#print(r.headers)
