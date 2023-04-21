@@ -2,16 +2,11 @@
 
 from checkin import checkin_generator_pb2
 from utils import functions
-import requests
-import gzip
-import random
-import shutil
-import os
-import binascii
-import yaml
+import requests, gzip, shutil, os, yaml
 
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
+    file.close()
 
 current_build = config['build_tag']
 current_incremental = config['incremental']
@@ -53,7 +48,6 @@ payload.id = 0
 payload.digest = functions.generateDigest()
 payload.checkin.CopyFrom(checkinproto)
 payload.locale = 'en-US'
-payload.loggingId = int(random.random() * 1000000000)
 payload.macAddr.append(functions.generateMac())
 payload.timeZone = 'America/New_York'
 payload.version = 3
@@ -71,17 +65,21 @@ with open('test_data.txt', 'wb') as f:
 with open('test_data.txt', 'rb') as f_in:
     with gzip.open('test_data.gz', 'wb') as f_out:
         shutil.copyfileobj(f_in, f_out)
+        f_out.close()
+    f_in.close()
 
 post_data = open('test_data.gz', 'rb')
 r = requests.post('https://android.googleapis.com/checkin', data=post_data, headers=headers)
-with open('test_response', 'wb') as result:
-    result.write(r.content)
-    result.close()
-
-with open('test_response', 'rb') as f:
-    response.ParseFromString(f.read())
+post_data.close()
+try:
+    found = False
+    response.ParseFromString(r.content)
     for entry in response.setting:
         if b'https://android.googleapis.com' in entry.value:
             print("OTA URL obtained: " + entry.value.decode())
-#print(r.text)
-#print(r.headers)
+            found = True
+            break
+    if not found:
+        print("No OTA URL found for your build. Either Google does not recognize your build fingerprint, or there are no new updates for your device.")
+except: # This should not happen.
+    print("Unable to obtain OTA URL.")
