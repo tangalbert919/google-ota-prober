@@ -20,3 +20,4 @@ This program is designed to obtain URLs to over-the-air (OTA) update packages fr
 1. https://github.com/MCMrARM/Google-Play-API/blob/master/proto/gsf.proto
 2. https://github.com/microg/GmsCore/blob/master/play-services-core-proto/src/main/proto/checkin.proto
 3. https://chromium.googlesource.com/chromium/chromium/+/trunk/google_apis/gcm/protocol/android_checkin.proto
+4. https://github.com/p1gp1g/fp3_get_ota_url
