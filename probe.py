@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 
 from checkin import checkin_generator_pb2
+from google.protobuf import text_format
 from utils import functions
-import requests, gzip, shutil, os, yaml
+import argparse, requests, gzip, shutil, os, yaml
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--debug', action='store_true', help='Print debug information to text file.')
+args = parser.parse_args()
 
 with open('config.yml', 'r') as file:
     config = yaml.safe_load(file)
@@ -74,6 +79,10 @@ post_data.close()
 try:
     found = False
     response.ParseFromString(r.content)
+    if args.debug:
+        with open('debug.txt', 'w') as f:
+            f.write(text_format.MessageToString(response))
+            f.close()
     for entry in response.setting:
         if b'https://android.googleapis.com' in entry.value:
             print("OTA URL obtained: " + entry.value.decode())
