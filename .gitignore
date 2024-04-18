@@ -1,4 +1,5 @@
 debug.txt
 test_data.txt
 *.gz
+*.zip
 __pycache__
