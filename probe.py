@@ -7,6 +7,7 @@ import argparse, requests, gzip, shutil, os, yaml
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true', help='Print debug information to text file.')
+parser.add_argument('--download', action='store_true', help='Download the OTA file.')
 args = parser.parse_args()
 
 with open('config.yml', 'r') as file:
@@ -71,6 +72,7 @@ post_data = open('test_data.gz', 'rb')
 r = requests.post('https://android.googleapis.com/checkin', data=post_data, headers=headers)
 post_data.close()
 try:
+    download_url = ""
     found = False
     response.ParseFromString(r.content)
     if args.debug:
@@ -81,7 +83,17 @@ try:
         if b'https://android.googleapis.com' in entry.value:
             print("OTA URL obtained: " + entry.value.decode())
             found = True
+            download_url = entry.value.decode()
             break
+    if args.download:
+        print("Downloading OTA file")
+        ota_resp = requests.get(download_url)
+        if ota_resp.status_code == 200:
+            with open('ota.zip', 'wb') as file:
+                file.write(ota_resp.content)
+            print("File downloaded and saved as ota.zip!")
+        else:
+            print(f"Failed to download file with status code {ota_resp.status_code}")
     if not found:
         print("No OTA URL found for your build. Either Google does not recognize your build fingerprint, or there are no new updates for your device.")
 except: # This should not happen.
