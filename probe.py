@@ -63,15 +63,9 @@ payload.userSerialNumber = 0
 payload.fetchSystemUpdates = 1
 payload.unknown30 = 0
 
-with open('test_data.txt', 'wb') as f:
-    f.write(payload.SerializeToString())
-    f.close()
-
-with open('test_data.txt', 'rb') as f_in:
-    with gzip.open('test_data.gz', 'wb') as f_out:
-        shutil.copyfileobj(f_in, f_out)
-        f_out.close()
-    f_in.close()
+with gzip.open('test_data.gz', 'wb') as f_out:
+    f_out.write(payload.SerializeToString())
+    f_out.close()
 
 post_data = open('test_data.gz', 'rb')
 r = requests.post('https://android.googleapis.com/checkin', data=post_data, headers=headers)
