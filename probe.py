@@ -87,13 +87,23 @@ try:
             break
     if args.download:
         print("Downloading OTA file")
-        ota_resp = requests.get(download_url)
-        if ota_resp.status_code == 200:
-            with open('ota.zip', 'wb') as file:
-                file.write(ota_resp.content)
-            print("File downloaded and saved as ota.zip!")
-        else:
-            print(f"Failed to download file with status code {ota_resp.status_code}")
+        with requests.get(download_url, stream=True) as resp:
+            resp.raise_for_status()
+            filename = download_url.split('/')[-1]
+
+            total_size = int(resp.headers.get('content-length', 0))
+            chunk_size = 1024
+
+            with open(filename, 'wb') as file:
+                progress = 0
+
+                for chunk in resp.iter_content(chunk_size=chunk_size):
+                    if chunk:
+                        file.write(chunk)
+                        progress += len(chunk)
+                        percentage = (progress / total_size) * 100
+                        print(f"Downloaded {progress} of {total_size} bytes ({percentage:.2f}%)")
+            print(f"File downloaded and saved as {filename}!")
     if not found:
         print("No OTA URL found for your build. Either Google does not recognize your build fingerprint, or there are no new updates for your device.")
 except: # This should not happen.
