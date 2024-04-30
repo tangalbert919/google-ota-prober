@@ -11,6 +11,8 @@ This program is designed to obtain URLs to over-the-air (OTA) update packages fr
 2. Modify `config.yml` correctly, as described in the file itself.
 3. `python probe.py`
 
+If you wish to download the OTA file, pass `--download` as an argument on your terminal.
+
 ## Limitations
 * This only works for devices that use Google's OTA update servers.
 * The prober can only get the latest OTA update package that works on the build specified in `config.yml`.
