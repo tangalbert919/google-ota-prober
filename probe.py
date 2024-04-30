@@ -102,7 +102,7 @@ try:
                         file.write(chunk)
                         progress += len(chunk)
                         percentage = (progress / total_size) * 100
-                        print(f"Downloaded {progress} of {total_size} bytes ({percentage:.2f}%)")
+                        print(f"Downloaded {progress} of {total_size} bytes ({percentage:.2f}%)", end="\r")
             print(f"File downloaded and saved as {filename}!")
     if not found:
         print("No OTA URL found for your build. Either Google does not recognize your build fingerprint, or there are no new updates for your device.")
