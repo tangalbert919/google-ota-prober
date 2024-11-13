@@ -73,19 +73,21 @@ r = requests.post('https://android.googleapis.com/checkin', data=post_data, head
 post_data.close()
 try:
     download_url = ""
-    found = False
     response.ParseFromString(r.content)
     if args.debug:
         with open('debug.txt', 'w') as f:
             f.write(text_format.MessageToString(response))
             f.close()
-    for entry in response.setting:
-        if b'https://android.googleapis.com' in entry.value:
-            print("OTA URL obtained: " + entry.value.decode())
-            found = True
-            download_url = entry.value.decode()
-            break
-    if args.download:
+    setting = {entry.name: entry.value for entry in response.setting}
+    update_title = setting.get(b'update_title', b'').decode()
+    if update_title:
+        print("Update title: " + setting.get(b'update_title', b'').decode())
+    download_url = setting.get(b'update_url', b'').decode()
+    if download_url:
+        print("OTA URL obtained: " + download_url)
+    else:
+        print("No OTA URL found for your build. Either Google does not recognize your build fingerprint, or there are no new updates for your device.")
+    if args.download and download_url:
         print("Downloading OTA file")
         with requests.get(download_url, stream=True) as resp:
             resp.raise_for_status()
@@ -104,7 +106,5 @@ try:
                         percentage = (progress / total_size) * 100
                         print(f"Downloaded {progress} of {total_size} bytes ({percentage:.2f}%)", end="\r")
             print(f"File downloaded and saved as {filename}!")
-    if not found:
-        print("No OTA URL found for your build. Either Google does not recognize your build fingerprint, or there are no new updates for your device.")
 except: # This should not happen.
     print("Unable to obtain OTA URL.")
