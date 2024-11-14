@@ -8,19 +8,41 @@ import argparse, requests, gzip, shutil, os, yaml
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true', help='Print debug information to text file.')
 parser.add_argument('--download', action='store_true', help='Download the OTA file.')
+parser.add_argument('--fingerprint', help='Get the OTA using this fingerprint. Reading the config YML file is skipped.')
+parser.add_argument('--model', help='Specify the model of the device. Required with --fingerprint.')
 args = parser.parse_args()
 
-with open('config.yml', 'r') as file:
-    config = yaml.safe_load(file)
-    file.close()
+if args.fingerprint:
+    config = args.fingerprint.split('/')
+    # Split "<device>:<android_version">
+    temp = config[2].split(':')
+    # Drop, then reinsert as two separate entries
+    config.pop(2)
+    config.insert(2, temp[0])
+    config.insert(3, temp[1])
+else:
+    with open('config.yml', 'r') as file:
+        config = yaml.safe_load(file)
+        file.close()
 
-current_build = config['build_tag']
-current_incremental = config['incremental']
-android_version = config['android_version']
-model = config['model']
-device = config['device']
-oem = config['oem']
-product = config['product']
+# <oem>/<product>/<device>:<android_version>/<build_tag>/<incremental>:user/release-keys
+if not args.fingerprint:
+    current_build = config['build_tag']
+    current_incremental = config['incremental']
+    android_version = config['android_version']
+    model = config['model']
+    device = config['device']
+    oem = config['oem']
+    product = config['product']
+else:
+    current_build = config[4]
+    android_version = config[3]
+    device = config[2]
+    if args.model:
+        model = args.model
+    else:
+        print('You must specify a model with --model when using --fingerprint.')
+        exit(1)
 
 headers = {
     'accept-encoding': 'gzip, deflate',
@@ -35,7 +57,10 @@ build = checkin_generator_pb2.AndroidBuildProto()
 response = checkin_generator_pb2.AndroidCheckinResponse()
 
 # Add build properties
-build.id = f'{oem}/{product}/{device}:{android_version}/{current_build}/{current_incremental}:user/release-keys' # Put the build fingerprint here
+if args.fingerprint:
+    build.id = args.fingerprint
+else:
+    build.id = f'{oem}/{product}/{device}:{android_version}/{current_build}/{current_incremental}:user/release-keys' # Put the build fingerprint here
 build.timestamp = 0
 build.device = device
 
