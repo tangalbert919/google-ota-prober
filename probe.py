@@ -10,6 +10,7 @@ parser.add_argument('--debug', action='store_true', help='Print debug informatio
 parser.add_argument('--download', action='store_true', help='Download the OTA file.')
 parser.add_argument('--fingerprint', help='Get the OTA using this fingerprint. Reading the config YML file is skipped.')
 parser.add_argument('--model', help='Specify the model of the device. Required with --fingerprint.')
+parser.add_argument('--config', help='Use this config file instead of the default one.', default='config.yml')
 args = parser.parse_args()
 
 class Prober:
@@ -107,10 +108,14 @@ class Prober:
             else:
                 return self.checkin(args.fingerprint, args.model, args.debug)
         else:
-            with open('config.yml', 'r') as file:
-                config = yaml.safe_load(file)
-                file.close()
-            return self.checkin(f'{config["oem"]}/{config["product"]}/{config["device"]}:{config["android_version"]}/{config["build_tag"]}/{config["incremental"]}:user/release-keys', config['model'], args.debug)
+            try:
+                with open(args.config, 'r') as file:
+                    config = yaml.safe_load(file)
+                    file.close()
+                return self.checkin(f'{config["oem"]}/{config["product"]}/{config["device"]}:{config["android_version"]}/{config["build_tag"]}/{config["incremental"]}:user/release-keys', config['model'], args.debug)
+            except:
+                print("Invalid config file.")
+                exit(1)
         
     def download(self, url: str) -> None:
         if url is None:
