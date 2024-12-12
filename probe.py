@@ -135,8 +135,9 @@ class Prober:
             print(f"File downloaded and saved as {filename}!")
 
 
-prober = Prober()
-if args.download:
-    prober.download(prober.checkin_cli())
-else:
-    prober.checkin_cli()
+if __name__ == '__main__':
+    prober = Prober()
+    if args.download:
+        prober.download(prober.checkin_cli())
+    else:
+        prober.checkin_cli()
