@@ -13,6 +13,9 @@ def main(page: ft.Page):
         if url is not None:
             print("Download button enabled")
             downloadBtn.disabled = False
+        else:
+            print("Download button disabled")
+            downloadBtn.disabled = True
         page.update()
     
     def download(e):
