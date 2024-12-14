@@ -23,16 +23,20 @@ class Prober:
         build = checkin_generator_pb2.AndroidBuildProto()
         response = checkin_generator_pb2.AndroidCheckinResponse()
 
-        config = fingerprint.split('/')
-        # Split "<device>:<android_version">
-        temp = config[2].split(':')
-        # Drop, then reinsert as two separate entries
-        config.pop(2)
-        config.insert(2, temp[0])
-        config.insert(3, temp[1])
-        current_build = config[4]
-        android_version = config[3]
-        device = config[2]
+        try:
+            config = fingerprint.split('/')
+            # Split "<device>:<android_version">
+            temp = config[2].split(':')
+            # Drop, then reinsert as two separate entries
+            config.pop(2)
+            config.insert(2, temp[0])
+            config.insert(3, temp[1])
+            current_build = config[4]
+            android_version = config[3]
+            device = config[2]
+        except:
+            print("Invalid fingerprint.")
+            return None
         self.headers = {
             'accept-encoding': 'gzip, deflate',
             'content-encoding': 'gzip',
