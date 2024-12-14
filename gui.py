@@ -3,18 +3,15 @@ import probe
 
 def main(page: ft.Page):
     prober = probe.Prober()
-    url = ""
 
     def start_probe(e):
-        print("Button clicked")
-        print(fingerprint.value)
         global url
         url = prober.checkin(fingerprint.value, model.value)
         if url is not None:
-            print("Download button enabled")
+            update_info.value = "An update is available!"
             downloadBtn.disabled = False
         else:
-            print("Download button disabled")
+            update_info.value = "No update is available."
             downloadBtn.disabled = True
         page.update()
     
@@ -27,11 +24,14 @@ def main(page: ft.Page):
     fingerprint = ft.TextField(label="Enter fingerprint here")
     model = ft.TextField(label="Enter model here")
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
+    update_info = ft.Text("Update info will be displayed here")
+
     page.add(ft.Column([
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
         ft.Container(content=ft.ElevatedButton("Start probe", bgcolor="#FF8F8F", on_click=start_probe), alignment=ft.alignment.center),
-        ft.Container(content=downloadBtn, alignment=ft.alignment.center)
+        ft.Container(content=downloadBtn, alignment=ft.alignment.center),
+        ft.Container(content=update_info, alignment=ft.alignment.center)
     ], alignment=ft.MainAxisAlignment.CENTER))
     page.update()
 
