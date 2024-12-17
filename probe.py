@@ -3,7 +3,7 @@
 from checkin import checkin_generator_pb2
 from google.protobuf import text_format
 from utils import functions
-import argparse, requests, gzip, shutil, os, yaml
+import argparse, requests, gzip, yaml
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true', help='Print debug information to text file.')
