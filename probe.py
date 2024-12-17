@@ -15,13 +15,21 @@ args = parser.parse_args()
 
 class Prober:
     def __init__(self):
-        pass
+        self.checkinproto = checkin_generator_pb2.AndroidCheckinProto()
+        self.payload = checkin_generator_pb2.AndroidCheckinRequest()
+        self.build = checkin_generator_pb2.AndroidBuildProto()
+        self.response = checkin_generator_pb2.AndroidCheckinResponse()
+
+    def get_update_desc(self):
+        setting = {entry.name: entry.value for entry in self.response.setting}
+        update_desc = setting.get(b'update_description', b'').decode()
+        return update_desc
 
     def checkin(self, fingerprint: str, model: str, debug: bool = False) -> str:
-        checkinproto = checkin_generator_pb2.AndroidCheckinProto()
-        payload = checkin_generator_pb2.AndroidCheckinRequest()
-        build = checkin_generator_pb2.AndroidBuildProto()
-        response = checkin_generator_pb2.AndroidCheckinResponse()
+        self.checkinproto.Clear()
+        self.payload.Clear()
+        self.build.Clear()
+        self.response.Clear()
 
         try:
             config = fingerprint.split('/')
@@ -45,37 +53,37 @@ class Prober:
         }
 
         # Add build properties
-        build.id = fingerprint
-        build.timestamp = 0
-        build.device = device
+        self.build.id = fingerprint
+        self.build.timestamp = 0
+        self.build.device = device
 
         # Checkin proto
-        checkinproto.build.CopyFrom(build)
-        checkinproto.lastCheckinMsec = 0
-        checkinproto.roaming = "WIFI::"
-        checkinproto.userNumber = 0
-        checkinproto.deviceType = 2
-        checkinproto.voiceCapable = False
-        checkinproto.unknown19 = "WIFI"
+        self.checkinproto.build.CopyFrom(self.build)
+        self.checkinproto.lastCheckinMsec = 0
+        self.checkinproto.roaming = "WIFI::"
+        self.checkinproto.userNumber = 0
+        self.checkinproto.deviceType = 2
+        self.checkinproto.voiceCapable = False
+        self.checkinproto.unknown19 = "WIFI"
 
         # Generate the payload
-        payload.imei = functions.generateImei()
-        payload.id = 0
-        payload.digest = functions.generateDigest()
-        payload.checkin.CopyFrom(checkinproto)
-        payload.locale = 'en-US'
-        payload.macAddr.append(functions.generateMac())
-        payload.timeZone = 'America/New_York'
-        payload.version = 3
-        payload.serialNumber = functions.generateSerial()
-        payload.macAddrType.append('wifi')
-        payload.fragment = 0
-        payload.userSerialNumber = 0
-        payload.fetchSystemUpdates = 1
-        payload.unknown30 = 0
+        self.payload.imei = functions.generateImei()
+        self.payload.id = 0
+        self.payload.digest = functions.generateDigest()
+        self.payload.checkin.CopyFrom(self.checkinproto)
+        self.payload.locale = 'en-US'
+        self.payload.macAddr.append(functions.generateMac())
+        self.payload.timeZone = 'America/New_York'
+        self.payload.version = 3
+        self.payload.serialNumber = functions.generateSerial()
+        self.payload.macAddrType.append('wifi')
+        self.payload.fragment = 0
+        self.payload.userSerialNumber = 0
+        self.payload.fetchSystemUpdates = 1
+        self.payload.unknown30 = 0
 
         with gzip.open('test_data.gz', 'wb') as f_out:
-            f_out.write(payload.SerializeToString())
+            f_out.write(self.payload.SerializeToString())
             f_out.close()
 
         post_data = open('test_data.gz', 'rb')
@@ -84,12 +92,12 @@ class Prober:
 
         download_url = ""
         try:
-            response.ParseFromString(r.content)
+            self.response.ParseFromString(r.content)
             if debug:
                 with open('debug.txt', 'w') as f:
-                    f.write(text_format.MessageToString(response))
+                    f.write(text_format.MessageToString(self.response))
                     f.close()
-            setting = {entry.name: entry.value for entry in response.setting}
+            setting = {entry.name: entry.value for entry in self.response.setting}
             update_title = setting.get(b'update_title', b'').decode()
             if update_title:
                 print("Update title: " + setting.get(b'update_title', b'').decode())

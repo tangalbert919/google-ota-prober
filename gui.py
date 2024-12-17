@@ -11,17 +11,18 @@ def main(page: ft.Page):
             update_info.value = "An update is available!"
             downloadBtn.disabled = False
             update_dlg_btn.disabled = False
+            update_dlg.content = ft.Text(prober.get_update_desc())
         else:
             update_info.value = "No update is available."
             downloadBtn.disabled = True
             update_dlg_btn.disabled = True
         page.update()
-    
+
     def download(e):
         print("Download button clicked")
         global url
         prober.download(url)
-    
+
     update_dlg = ft.AlertDialog(
         title=ft.Text("Update changelog"),
         on_dismiss=lambda e: print("Dialog dismissed."),
