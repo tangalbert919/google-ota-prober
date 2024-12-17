@@ -1,5 +1,6 @@
 import flet as ft
 import probe
+from markdownify import markdownify as md
 
 def main(page: ft.Page):
     prober = probe.Prober()
@@ -11,7 +12,7 @@ def main(page: ft.Page):
             update_info.value = "An update is available!"
             downloadBtn.disabled = False
             update_dlg_btn.disabled = False
-            update_dlg.content = ft.Text(prober.get_update_desc())
+            update_dlg.content = ft.Markdown(md(prober.get_update_desc()))
         else:
             update_info.value = "No update is available."
             downloadBtn.disabled = True
@@ -30,7 +31,7 @@ def main(page: ft.Page):
     page.on_resized = page_resized
 
     update_dlg = ft.AlertDialog(
-        title=ft.Text("Update changelog"),
+        title=ft.Text("Update changelog", text_align=ft.TextAlign.CENTER),
         on_dismiss=lambda e: print("Dialog dismissed."),
     )
 
