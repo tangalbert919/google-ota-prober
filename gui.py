@@ -23,6 +23,12 @@ def main(page: ft.Page):
         global url
         prober.download(url)
 
+    def page_resized(e):
+        content.height = page.window.height
+        page.update()
+
+    page.on_resized = page_resized
+
     update_dlg = ft.AlertDialog(
         title=ft.Text("Update changelog"),
         on_dismiss=lambda e: print("Dialog dismissed."),
@@ -35,14 +41,16 @@ def main(page: ft.Page):
     update_info = ft.Text("Update info will be displayed here")
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
 
-    page.add(ft.Column([
+    content = ft.Column([
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
         ft.Container(content=ft.ElevatedButton("Start probe", bgcolor="#FF8F8F", on_click=start_probe), alignment=ft.alignment.center),
         ft.Container(content=downloadBtn, alignment=ft.alignment.center),
         ft.Container(content=update_info, alignment=ft.alignment.center),
         ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
-    ], alignment=ft.MainAxisAlignment.CENTER))
+    ], alignment=ft.MainAxisAlignment.CENTER, height=page.window.height)
+
+    page.add(content)
     page.update()
 
 ft.app(target=main)
