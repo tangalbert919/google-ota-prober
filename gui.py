@@ -35,6 +35,9 @@ def main(page: ft.Page):
         on_dismiss=lambda e: print("Dialog dismissed."),
     )
 
+    page.theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE_GREY_900)
+    page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.WHITE24)
+
     page.title = "Google OTA Prober"
     fingerprint = ft.TextField(label="Enter fingerprint here")
     model = ft.TextField(label="Enter model here")
@@ -45,7 +48,7 @@ def main(page: ft.Page):
     content = ft.Column([
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
-        ft.Container(content=ft.ElevatedButton("Start probe", bgcolor="#FF8F8F", on_click=start_probe), alignment=ft.alignment.center),
+        ft.Container(content=ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe), alignment=ft.alignment.center),
         ft.Container(content=downloadBtn, alignment=ft.alignment.center),
         ft.Container(content=update_info, alignment=ft.alignment.center),
         ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
