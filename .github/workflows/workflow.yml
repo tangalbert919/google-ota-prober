@@ -11,6 +11,7 @@ jobs:
               uses: subosito/flutter-action@v2
               with:
                 channel: 'stable'
+                flutter-version: 3.24.4
 
             - name: Install dependencies
               run: |
@@ -20,7 +21,7 @@ jobs:
             - name: Flet build windows
               run: |
                 flutter config --no-analytics
-                flet build windows --verbose --no-rich-output
+                flet build windows --verbose --no-rich-output --module-name gui
             
             - name: Upload artifact
               uses: actions/upload-artifact@v4
