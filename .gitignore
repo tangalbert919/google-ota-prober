@@ -3,3 +3,7 @@ test_data.txt
 *.gz
 *.zip
 __pycache__
+
+# non-python output
+build/
+.venv/
