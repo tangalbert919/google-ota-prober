@@ -9,7 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--debug', action='store_true', help='Print debug information to text file.')
 parser.add_argument('--download', action='store_true', help='Download the OTA file.')
 parser.add_argument('--fingerprint', help='Get the OTA using this fingerprint. Reading the config YML file is skipped.')
-parser.add_argument('--model', help='Specify the model of the device. Required with --fingerprint.')
+parser.add_argument('--model', help='Specify the model of the device. If not specified, the device code will be used.')
 parser.add_argument('--config', help='Use this config file instead of the default one.', default='config.yml')
 args = parser.parse_args()
 
@@ -25,7 +25,7 @@ class Prober:
         update_desc = setting.get(b'update_description', b'').decode()
         return update_desc
 
-    def checkin(self, fingerprint: str, model: str, debug: bool = False) -> str:
+    def checkin(self, fingerprint: str, model: str = None, debug: bool = False) -> str:
         self.checkinproto.Clear()
         self.payload.Clear()
         self.build.Clear()
@@ -45,6 +45,8 @@ class Prober:
         except:
             print("Invalid fingerprint.")
             return None
+        if model is None or model.empty():
+            model = device
         self.headers = {
             'accept-encoding': 'gzip, deflate',
             'content-encoding': 'gzip',
@@ -114,11 +116,7 @@ class Prober:
 
     def checkin_cli(self) -> str:
         if args.fingerprint:
-            if not args.model:
-                print('You must specify a model with --model when using --fingerprint.')
-                exit(1)
-            else:
-                return self.checkin(args.fingerprint, args.model, args.debug)
+            return self.checkin(args.fingerprint, args.model, args.debug)
         else:
             try:
                 with open(args.config, 'r') as file:
