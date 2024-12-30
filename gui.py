@@ -28,6 +28,13 @@ def main(page: ft.Page):
         content.height = page.window.height
         page.update()
 
+    def validate_fingerprint(e):
+        if fingerprint.value == "":
+            probeBtn.disabled = True
+        else:
+            probeBtn.disabled = False
+        page.update()
+
     page.on_resized = page_resized
 
     update_dlg = ft.AlertDialog(
@@ -39,8 +46,9 @@ def main(page: ft.Page):
     page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.WHITE24)
 
     page.title = "Google OTA Prober"
-    fingerprint = ft.TextField(label="Enter fingerprint here")
+    fingerprint = ft.TextField(label="Enter fingerprint here", on_change=validate_fingerprint)
     model = ft.TextField(label="Enter model here")
+    probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
     update_info = ft.Text("Update info will be displayed here")
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
@@ -48,7 +56,7 @@ def main(page: ft.Page):
     content = ft.Column([
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
-        ft.Container(content=ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe), alignment=ft.alignment.center),
+        ft.Container(content=probeBtn, alignment=ft.alignment.center),
         ft.Container(content=downloadBtn, alignment=ft.alignment.center),
         ft.Container(content=update_info, alignment=ft.alignment.center),
         ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
