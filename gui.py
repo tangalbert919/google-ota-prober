@@ -5,6 +5,7 @@ from markdownify import markdownify as md
 def main(page: ft.Page):
     prober = probe.Prober()
 
+    # Needed methods for buttons
     def start_probe(e):
         global url
         url = prober.checkin(fingerprint.value, model.value)
@@ -37,15 +38,17 @@ def main(page: ft.Page):
 
     page.on_resized = page_resized
 
+    # Theme
+    page.theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE_GREY_900)
+    page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.WHITE24)
+    page.title = "Google OTA Prober"
+
+    # GUI Components
     update_dlg = ft.AlertDialog(
         title=ft.Text("Update changelog", text_align=ft.TextAlign.CENTER),
         on_dismiss=lambda e: print("Dialog dismissed."),
     )
 
-    page.theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE_GREY_900)
-    page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.WHITE24)
-
-    page.title = "Google OTA Prober"
     fingerprint = ft.TextField(label="Enter fingerprint here", on_change=validate_fingerprint)
     model = ft.TextField(label="Enter model here (optional)")
     probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
@@ -53,6 +56,7 @@ def main(page: ft.Page):
     update_info = ft.Text("Update info will be displayed here")
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
 
+    # Generate the page
     content = ft.Column([
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
