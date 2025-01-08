@@ -47,7 +47,7 @@ def main(page: ft.Page):
 
     page.title = "Google OTA Prober"
     fingerprint = ft.TextField(label="Enter fingerprint here", on_change=validate_fingerprint)
-    model = ft.TextField(label="Enter model here")
+    model = ft.TextField(label="Enter model here (optional)")
     probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
     update_info = ft.Text("Update info will be displayed here")
