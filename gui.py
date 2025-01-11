@@ -25,18 +25,12 @@ def main(page: ft.Page):
         global url
         prober.download(url)
 
-    def page_resized(e):
-        content.height = page.window.height
-        page.update()
-
     def validate_fingerprint(e):
         if fingerprint.value == "":
             probeBtn.disabled = True
         else:
             probeBtn.disabled = False
         page.update()
-
-    page.on_resized = page_resized
 
     # Theme
     page.theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE_GREY_900)
@@ -64,7 +58,7 @@ def main(page: ft.Page):
         ft.Container(content=downloadBtn, alignment=ft.alignment.center),
         ft.Container(content=update_info, alignment=ft.alignment.center),
         ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
-    ], alignment=ft.MainAxisAlignment.CENTER, height=page.window.height)
+    ], alignment=ft.MainAxisAlignment.CENTER, expand=True)
 
     page.add(content)
     page.update()
