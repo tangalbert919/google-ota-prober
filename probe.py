@@ -45,7 +45,7 @@ class Prober:
         except:
             print("Invalid fingerprint.")
             return None
-        if model is None or model.empty():
+        if model is None or model == '':
             model = device
         self.headers = {
             'accept-encoding': 'gzip, deflate',
