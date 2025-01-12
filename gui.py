@@ -13,11 +13,13 @@ def main(page: ft.Page):
             update_info.value = "An update is available!"
             downloadBtn.disabled = False
             update_dlg_btn.disabled = False
+            saveBtn.disabled = False
             update_dlg.content = ft.Markdown(md(prober.get_update_desc()))
         else:
             update_info.value = "No update is available."
             downloadBtn.disabled = True
             update_dlg_btn.disabled = True
+            saveBtn.disabled = True
         page.update()
 
     def download(e):
@@ -47,6 +49,7 @@ def main(page: ft.Page):
     model = ft.TextField(label="Enter model here (optional)")
     probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
+    saveBtn = ft.ElevatedButton("Save", on_click=lambda e: print("Save button clicked"), disabled=True)
     update_info = ft.Text("Update info will be displayed here")
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
 
@@ -55,7 +58,7 @@ def main(page: ft.Page):
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
         ft.Container(content=probeBtn, alignment=ft.alignment.center),
-        ft.Container(content=downloadBtn, alignment=ft.alignment.center),
+        ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.alignment.center),
         ft.Container(content=update_info, alignment=ft.alignment.center),
         ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
     ], alignment=ft.MainAxisAlignment.CENTER, expand=True)
