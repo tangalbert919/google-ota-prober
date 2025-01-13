@@ -127,7 +127,7 @@ class Prober:
                 print("Invalid config file.")
                 exit(1)
         
-    def download(self, url: str) -> None:
+    def download(self, url: str, progress_bar = None, page = None) -> None:
         if url is None:
             return
         print("Downloading OTA file")
@@ -145,6 +145,9 @@ class Prober:
                     if chunk:
                         file.write(chunk)
                         progress += len(chunk)
+                        if progress_bar is not None and page is not None:
+                            progress_bar.value = float(progress / total_size)
+                            page.update()
                         percentage = (progress / total_size) * 100
                         print(f"Downloaded {progress} of {total_size} bytes ({percentage:.2f}%)", end="\r")
             print(f"File downloaded and saved as {filename}!")

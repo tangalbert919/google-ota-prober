@@ -26,7 +26,7 @@ def main(page: ft.Page):
     def download(e):
         print("Download button clicked")
         global url
-        prober.download(url)
+        prober.download(url, progress_bar=progress_bar, page=page)
 
     def validate_fingerprint(e):
         if fingerprint.value == "":
@@ -77,6 +77,7 @@ def main(page: ft.Page):
     saveBtn = ft.ElevatedButton("Save", on_click=save_fingerprint, disabled=True)
     update_info = ft.Text("Update info will be displayed here")
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
+    progress_bar = ft.ProgressBar(width=300, value=0)
 
     # Generate the page
     content = ft.Column([
@@ -85,7 +86,8 @@ def main(page: ft.Page):
         ft.Container(content=probeBtn, alignment=ft.alignment.center),
         ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.alignment.center),
         ft.Container(content=update_info, alignment=ft.alignment.center),
-        ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
+        ft.Container(content=update_dlg_btn, alignment=ft.alignment.center),
+        ft.Container(content=progress_bar, alignment=ft.alignment.center)
     ], alignment=ft.MainAxisAlignment.CENTER, expand=True)
 
     page.add(content)
