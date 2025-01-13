@@ -1,5 +1,6 @@
 import flet as ft
 import probe
+import time
 from markdownify import markdownify as md
 
 def main(page: ft.Page):
@@ -34,6 +35,30 @@ def main(page: ft.Page):
             probeBtn.disabled = False
         page.update()
 
+    def save_fingerprint(e):
+        # Check if fingerprints.txt exists.
+        try:
+            fingerprint_file = open("fingerprints.txt", "r+")
+        except:
+            print("Fingerprints.txt does not exist. Creating one.")
+            fingerprint_file = open("fingerprints.txt", "w+")
+        # Check if the fingerprint is already in the file
+        temp = update_info.value
+        duplicate = False
+        for line in fingerprint_file:
+            if line == fingerprint.value:
+                update_info.value = "Fingerprint already exists in the file."
+                duplicate = True
+                break
+        if not duplicate:
+            fingerprint_file.write(fingerprint.value)
+            update_info.value = "Fingerprint saved."
+        page.update()
+        fingerprint_file.close()
+        time.sleep(3)
+        update_info.value = temp
+        page.update()
+
     # Theme
     page.theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE_GREY_900)
     page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.WHITE24)
@@ -49,7 +74,7 @@ def main(page: ft.Page):
     model = ft.TextField(label="Enter model here (optional)")
     probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
-    saveBtn = ft.ElevatedButton("Save", on_click=lambda e: print("Save button clicked"), disabled=True)
+    saveBtn = ft.ElevatedButton("Save", on_click=save_fingerprint, disabled=True)
     update_info = ft.Text("Update info will be displayed here")
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
 
