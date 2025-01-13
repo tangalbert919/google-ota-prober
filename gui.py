@@ -51,7 +51,7 @@ def main(page: ft.Page):
                 duplicate = True
                 break
         if not duplicate:
-            fingerprint_file.write(fingerprint.value)
+            fingerprint_file.write(fingerprint.value + '\n')
             update_info.value = "Fingerprint saved."
         page.update()
         fingerprint_file.close()
