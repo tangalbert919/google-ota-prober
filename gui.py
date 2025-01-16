@@ -79,15 +79,29 @@ def main(page: ft.Page):
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
     progress_bar = ft.ProgressBar(width=300, value=0)
 
+    page.bottom_appbar = ft.BottomAppBar(
+        bgcolor="#057A2C",
+        content=ft.Row(
+            controls=[
+                ft.IconButton(ft.Icons.HOME, on_click=lambda e: page.go("/")),
+                ft.IconButton(ft.Icons.SETTINGS, on_click=lambda e: page.go("/settings")),
+                ft.Container(expand=True),
+                ft.Column(
+                    controls=[progress_bar, update_info], alignment=ft.MainAxisAlignment.CENTER, expand=True
+                ),
+                ft.Container(expand=True),
+                ft.IconButton(ft.Icons.INFO, on_click=lambda e: page.go("/about")),
+            ]
+        )
+    )
+
     # Generate the page
     content = ft.Column([
         ft.Container(content=fingerprint, alignment=ft.alignment.center),
         ft.Container(content=model, alignment=ft.alignment.center),
         ft.Container(content=probeBtn, alignment=ft.alignment.center),
         ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.alignment.center),
-        ft.Container(content=update_info, alignment=ft.alignment.center),
-        ft.Container(content=update_dlg_btn, alignment=ft.alignment.center),
-        ft.Container(content=progress_bar, alignment=ft.alignment.center)
+        ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
     ], alignment=ft.MainAxisAlignment.CENTER, expand=True)
 
     page.add(content)
