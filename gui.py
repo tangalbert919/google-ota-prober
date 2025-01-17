@@ -92,7 +92,7 @@ def main(page: ft.Page):
                 ft.IconButton(ft.Icons.SETTINGS, on_click=lambda e: page.go("/settings")),
                 ft.Container(expand=True),
                 ft.Column(
-                    controls=[progress_bar, update_info], alignment=ft.MainAxisAlignment.CENTER, expand=True
+                    controls=[progress_bar, update_info], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER, expand=True
                 ),
                 ft.Container(expand=True),
                 ft.IconButton(ft.Icons.INFO, on_click=lambda e: page.open(about_dlg))
