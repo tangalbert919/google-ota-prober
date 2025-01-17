@@ -69,6 +69,11 @@ def main(page: ft.Page):
         title=ft.Text("Update changelog", text_align=ft.TextAlign.CENTER),
         on_dismiss=lambda e: print("Dialog dismissed."),
     )
+    about_dlg = ft.AlertDialog(
+        title=ft.Text("About", text_align=ft.TextAlign.CENTER),
+        content=ft.Text("Google OTA Prober v1.0", text_align=ft.TextAlign.CENTER),
+        on_dismiss=lambda e: print("Dialog dismissed."),
+    )
 
     fingerprint = ft.TextField(label="Enter fingerprint here", on_change=validate_fingerprint)
     model = ft.TextField(label="Enter model here (optional)")
@@ -90,7 +95,7 @@ def main(page: ft.Page):
                     controls=[progress_bar, update_info], alignment=ft.MainAxisAlignment.CENTER, expand=True
                 ),
                 ft.Container(expand=True),
-                ft.IconButton(ft.Icons.INFO, on_click=lambda e: page.go("/about")),
+                ft.IconButton(ft.Icons.INFO, on_click=lambda e: page.open(about_dlg))
             ]
         )
     )
