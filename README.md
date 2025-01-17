@@ -7,11 +7,23 @@ This program is designed to obtain URLs to over-the-air (OTA) update packages fr
 * Build fingerprint of your stock ROM
 
 ## How to use
-1. Install needed dependencies: `python -m pip install -r requirements.txt`
-2. Modify `config.yml` correctly, as described in the file itself.
-3. `python probe.py`
+
+You must install dependencies before using the tool: `python -m pip install -r requirements.txt`
+
+### Option 1: Using a terminal
+There are three ways to get the URL, which are listed here:
+```
+python probe.py --fingerprint <fingerprint>   # Skips reading config.yml entirely.
+python probe.py --config <filename>           # Reads a custom YML file (same format as config.yml)
+python probe.py                               # Reads config.yml
+```
 
 If you wish to download the OTA file, pass `--download` as an argument on your terminal.
+
+### Option 2: Using a graphical interface
+This option requires installing the `flet` and `markdownify` modules to proceed. You must have the fingerprint for your device. The model code is optional, but encouraged.
+
+You can run the GUI with `python gui.py`.
 
 ## Limitations
 * This only works for devices that use Google's OTA update servers.
