@@ -59,6 +59,18 @@ def main(page: ft.Page):
         update_info.value = temp
         page.update()
 
+    def load_saved_fp():
+        fp = []
+        try:
+            fingerprint_file = open("fingerprints.txt", "r")
+        except:
+            fp.append(ft.Container(content=ft.Text("No saved fingerprints found."), alignment=ft.alignment.center))
+            return fp
+        for line in fingerprint_file:
+            fp.append(ft.Container(content=ft.Text(line), alignment=ft.alignment.center))
+        fingerprint_file.close()
+        return fp
+
     # Theme
     page.theme = ft.Theme(color_scheme_seed=ft.Colors.BLUE_GREY_900)
     page.dark_theme = ft.Theme(color_scheme_seed=ft.Colors.WHITE24)
@@ -72,6 +84,11 @@ def main(page: ft.Page):
     about_dlg = ft.AlertDialog(
         title=ft.Text("About", text_align=ft.TextAlign.CENTER),
         content=ft.Text("Google OTA Prober v1.0", text_align=ft.TextAlign.CENTER),
+        on_dismiss=lambda e: print("Dialog dismissed."),
+    )
+    saved_fp_dlg = ft.AlertDialog(
+        title=ft.Text("Saved fingerprints", text_align=ft.TextAlign.CENTER),
+        content=ft.Column(controls=load_saved_fp()),
         on_dismiss=lambda e: print("Dialog dismissed."),
     )
 
@@ -95,6 +112,7 @@ def main(page: ft.Page):
                     controls=[progress_bar, update_info], alignment=ft.MainAxisAlignment.CENTER, horizontal_alignment=ft.CrossAxisAlignment.CENTER, expand=True
                 ),
                 ft.Container(expand=True),
+                ft.IconButton(ft.Icons.FINGERPRINT, on_click=lambda e: page.open(saved_fp_dlg)),
                 ft.IconButton(ft.Icons.INFO, on_click=lambda e: page.open(about_dlg))
             ]
         )
