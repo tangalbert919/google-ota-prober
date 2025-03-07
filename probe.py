@@ -11,6 +11,7 @@ parser.add_argument('--download', action='store_true', help='Download the OTA fi
 parser.add_argument('--fingerprint', help='Get the OTA using this fingerprint. Reading the config YML file is skipped.')
 parser.add_argument('--model', help='Specify the model of the device. If not specified, the device code will be used.')
 parser.add_argument('--config', help='Use this config file instead of the default one.', default='config.yml')
+parser.add_argument('--serial', help='Specify the serial number of the device.', default=functions.generateSerial())
 args = parser.parse_args()
 
 class Prober:
@@ -77,7 +78,7 @@ class Prober:
         self.payload.macAddr.append(functions.generateMac())
         self.payload.timeZone = 'America/New_York'
         self.payload.version = 3
-        self.payload.serialNumber = functions.generateSerial()
+        self.payload.serialNumber = args.serial
         self.payload.macAddrType.append('wifi')
         self.payload.fragment = 0
         self.payload.userSerialNumber = 0
