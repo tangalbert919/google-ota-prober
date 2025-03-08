@@ -26,7 +26,7 @@ class Prober:
         update_desc = setting.get(b'update_description', b'').decode()
         return update_desc
 
-    def checkin(self, fingerprint: str, model: str = None, debug: bool = False) -> str:
+    def checkin(self, fingerprint: str, model: str = None, debug: bool = False, serial = functions.generateSerial()) -> str:
         self.checkinproto.Clear()
         self.payload.Clear()
         self.build.Clear()
@@ -78,7 +78,7 @@ class Prober:
         self.payload.macAddr.append(functions.generateMac())
         self.payload.timeZone = 'America/New_York'
         self.payload.version = 3
-        self.payload.serialNumber = args.serial
+        self.payload.serialNumber = serial
         self.payload.macAddrType.append('wifi')
         self.payload.fragment = 0
         self.payload.userSerialNumber = 0
@@ -117,7 +117,7 @@ class Prober:
 
     def checkin_cli(self) -> str:
         if args.fingerprint:
-            return self.checkin(args.fingerprint, args.model, args.debug)
+            return self.checkin(args.fingerprint, args.model, args.debug, args.serial)
         else:
             try:
                 with open(args.config, 'r') as file:
