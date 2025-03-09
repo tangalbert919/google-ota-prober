@@ -21,7 +21,7 @@ python probe.py                               # Reads config.yml
 If you wish to download the OTA file, pass `--download` as an argument on your terminal.
 
 ### Option 2: Using a graphical interface
-This option requires installing the `flet` and `markdownify` modules to proceed. You must have the fingerprint for your device. The model code is optional, but encouraged.
+This option requires installing all needed modules in `requirements-gui.txt`. You must have the fingerprint for your device. The model code is optional, but encouraged.
 
 You can run the GUI with `python gui.py`.
 
