@@ -3,6 +3,7 @@ import probe
 import time
 from markdownify import markdownify as md
 import sys
+import pyperclip
 
 # Ensure stdout and stderr use UTF-8
 sys.stdout.reconfigure(encoding='utf-8')
@@ -72,7 +73,12 @@ def main(page: ft.Page):
             fp.append(ft.Container(content=ft.Text("No saved fingerprints found."), alignment=ft.alignment.center))
             return fp
         for line in fingerprint_file:
-            fp.append(ft.Container(content=ft.Text(line), alignment=ft.alignment.center))
+            fp.append(ft.Container(content=ft.Row(
+                controls=[
+                    ft.Text(line),
+                    ft.Container(expand=True),
+                    ft.IconButton(ft.Icons.COPY, on_click=lambda e: pyperclip.copy(line))
+                ]), alignment=ft.alignment.center))
         fingerprint_file.close()
         return fp
 
