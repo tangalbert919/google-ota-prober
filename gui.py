@@ -2,6 +2,11 @@ import flet as ft
 import probe
 import time
 from markdownify import markdownify as md
+import sys
+
+# Ensure stdout and stderr use UTF-8
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 def main(page: ft.Page):
     prober = probe.Prober()

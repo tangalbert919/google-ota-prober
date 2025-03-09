@@ -59,10 +59,21 @@ jobs:
                 python -m pip install --upgrade pip
                 pip install -r requirements.txt
 
+            - name: Fix encoding issues
+              shell: bash
+              run: |
+                echo "PYTHONIOENCODING=utf-8" >> $GITHUB_ENV
+                echo "PYTHONUTF8=1" >> $GITHUB_ENV
+                echo "LANG=en_US.UTF-8" >> $GITHUB_ENV
+
             - name: Flet build windows
               run: |
                 flutter config --no-analytics
-                flet build windows --verbose --no-rich-output --module-name gui
+                pip install flet markdownify
+                python --version
+                python -c "import flet; print(flet.__version__)"
+                python -X utf8 -m pip show flet
+                python -X utf8 -m flet.cli build windows --verbose --no-rich-output --module-name gui
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
