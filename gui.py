@@ -70,7 +70,7 @@ def main(page: ft.Page):
         try:
             fingerprint_file = open("fingerprints.txt", "r")
         except:
-            fp.append(ft.Container(content=ft.Text("No saved fingerprints found."), alignment=ft.alignment.center))
+            fp.append(ft.Container(content=ft.Text("No saved fingerprints found."), alignment=ft.Alignment.CENTER))
             return fp
         for line in fingerprint_file:
             fp.append(ft.Container(content=ft.Row(
@@ -78,7 +78,7 @@ def main(page: ft.Page):
                     ft.Text(line),
                     ft.Container(expand=True),
                     ft.IconButton(ft.Icons.COPY, on_click=lambda e: pyperclip.copy(line))
-                ]), alignment=ft.alignment.center))
+                ]), alignment=ft.Alignment.CENTER))
         fingerprint_file.close()
         return fp
 
@@ -132,12 +132,12 @@ def main(page: ft.Page):
 
     # Generate the page
     content = ft.Column([
-        ft.Container(content=fingerprint, alignment=ft.alignment.center),
-        ft.Container(content=model, alignment=ft.alignment.center),
-        ft.Container(content=serial, alignment=ft.alignment.center),
-        ft.Container(content=probeBtn, alignment=ft.alignment.center),
-        ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.alignment.center),
-        ft.Container(content=update_dlg_btn, alignment=ft.alignment.center)
+        ft.Container(content=fingerprint, alignment=ft.Alignment.CENTER),
+        ft.Container(content=model, alignment=ft.Alignment.CENTER),
+        ft.Container(content=serial, alignment=ft.Alignment.CENTER),
+        ft.Container(content=probeBtn, alignment=ft.Alignment.CENTER),
+        ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.Alignment.CENTER),
+        ft.Container(content=update_dlg_btn, alignment=ft.Alignment.CENTER)
     ], alignment=ft.MainAxisAlignment.CENTER, expand=True)
 
     page.add(content)
