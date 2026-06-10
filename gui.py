@@ -15,7 +15,7 @@ def main(page: ft.Page):
     # Needed methods for buttons
     def start_probe(e):
         global url
-        url = prober.checkin(fingerprint.value, model.value)
+        url = prober.checkin(fingerprint.value, model.value, serial.value, imei.value)
         if url is not None:
             update_info.value = "An update is available!"
             downloadBtn.disabled = False
