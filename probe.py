@@ -50,6 +50,8 @@ class Prober:
             return None
         if model is None or model == '':
             model = device
+        if serial is None or serial == '':
+            serial = functions.generateSerial()
         self.headers = {
             'accept-encoding': 'gzip, deflate',
             'content-encoding': 'gzip',
