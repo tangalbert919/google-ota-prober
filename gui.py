@@ -106,6 +106,7 @@ def main(page: ft.Page):
     fingerprint = ft.TextField(label="Enter fingerprint here", on_change=validate_fingerprint)
     model = ft.TextField(label="Enter model here (optional)")
     serial = ft.TextField(label="Enter serial number here (optional)")
+    imei = ft.TextField(label="Enter IMEI here (optional)")
     probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
     saveBtn = ft.ElevatedButton("Save", on_click=save_fingerprint, disabled=True)
@@ -135,6 +136,7 @@ def main(page: ft.Page):
         ft.Container(content=fingerprint, alignment=ft.Alignment.CENTER),
         ft.Container(content=model, alignment=ft.Alignment.CENTER),
         ft.Container(content=serial, alignment=ft.Alignment.CENTER),
+        ft.Container(content=imei, alignment=ft.Alignment.CENTER),
         ft.Container(content=probeBtn, alignment=ft.Alignment.CENTER),
         ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.Alignment.CENTER),
         ft.Container(content=update_dlg_btn, alignment=ft.Alignment.CENTER)
