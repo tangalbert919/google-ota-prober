@@ -114,6 +114,21 @@ def main(page: ft.Page):
     update_dlg_btn = ft.ElevatedButton("Changelog", on_click=lambda e: page.open(update_dlg), disabled=True)
     progress_bar = ft.ProgressBar(width=300, value=0)
 
+    advanced_options = ft.ExpansionPanelList(
+        elevation=8,
+        controls=[
+            ft.ExpansionPanel(
+                header=ft.Text("Advanced options"),
+                content=ft.Column(
+                    controls=[
+                        serial,
+                        imei
+                    ]
+                )
+            )
+        ]
+    )
+
     page.bottom_appbar = ft.BottomAppBar(
         bgcolor="#057A2C",
         content=ft.Row(
@@ -135,8 +150,7 @@ def main(page: ft.Page):
     content = ft.Column([
         ft.Container(content=fingerprint, alignment=ft.Alignment.CENTER),
         ft.Container(content=model, alignment=ft.Alignment.CENTER),
-        ft.Container(content=serial, alignment=ft.Alignment.CENTER),
-        ft.Container(content=imei, alignment=ft.Alignment.CENTER),
+        ft.SafeArea(content=advanced_options),
         ft.Container(content=probeBtn, alignment=ft.Alignment.CENTER),
         ft.Container(content=ft.Row([downloadBtn, saveBtn], alignment=ft.MainAxisAlignment.CENTER, expand=True), alignment=ft.Alignment.CENTER),
         ft.Container(content=update_dlg_btn, alignment=ft.Alignment.CENTER)
