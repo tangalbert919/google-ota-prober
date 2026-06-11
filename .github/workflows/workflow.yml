@@ -11,7 +11,7 @@ jobs:
               uses: subosito/flutter-action@v2
               with:
                 channel: 'stable'
-                flutter-version: 3.24.4
+                flutter-version: 3.41.7
 
             - name: Install dependencies
               run: |
@@ -30,7 +30,7 @@ jobs:
             - name: Flet build linux
               run: |
                 flutter config --no-analytics
-                flet build linux --verbose --no-rich-output --module-name gui
+                flet build linux --verbose --module-name gui
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
@@ -50,7 +50,7 @@ jobs:
               uses: subosito/flutter-action@v2
               with:
                 channel: 'stable'
-                flutter-version: 3.24.4
+                flutter-version: 3.41.7
 
             - name: Install dependencies
               run: |
@@ -73,7 +73,7 @@ jobs:
                 python --version
                 python -c "import flet; print(flet.__version__)"
                 python -X utf8 -m pip show flet
-                python -X utf8 -m flet.cli build windows --verbose --no-rich-output --module-name gui
+                python -X utf8 -m flet.cli build windows --verbose --module-name gui
 
             - name: Upload artifact
               uses: actions/upload-artifact@v4
