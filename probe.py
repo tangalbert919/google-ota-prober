@@ -13,6 +13,7 @@ parser.add_argument('--model', help='Specify the model of the device. If not spe
 parser.add_argument('--config', help='Use this config file instead of the default one.', default='config.yml')
 parser.add_argument('--serial', help='Specify the serial number of the device.', default=functions.generateSerial())
 parser.add_argument('--imei', help='Specify the IMEI of the device.', default=functions.generateImei())
+parser.add_argument('--timestamp', help='Specify the timestamp of the build.', default=0)
 args = parser.parse_args()
 
 class Prober:
@@ -28,7 +29,8 @@ class Prober:
         return update_desc
 
     def checkin(self, fingerprint: str, model: str = None, debug: bool = False, 
-                serial = functions.generateSerial(), imei = functions.generateImei()) -> str:
+                serial = functions.generateSerial(), imei = functions.generateImei(),
+                timestamp: int = 0) -> str:
         self.checkinproto.Clear()
         self.payload.Clear()
         self.build.Clear()
@@ -61,7 +63,7 @@ class Prober:
 
         # Add build properties
         self.build.id = fingerprint
-        self.build.timestamp = 0
+        self.build.timestamp = int(timestamp)
         self.build.device = device
 
         # Checkin proto
@@ -121,13 +123,14 @@ class Prober:
 
     def checkin_cli(self) -> str:
         if args.fingerprint:
-            return self.checkin(args.fingerprint, args.model, args.debug, args.serial, args.imei)
+            return self.checkin(args.fingerprint, args.model, args.debug, args.serial, args.imei, args.timestamp)
         else:
             try:
                 with open(args.config, 'r') as file:
                     config = yaml.safe_load(file)
                     file.close()
-                return self.checkin(f'{config["oem"]}/{config["product"]}/{config["device"]}:{config["android_version"]}/{config["build_tag"]}/{config["incremental"]}:user/release-keys', config['model'], args.debug)
+                return self.checkin(f'{config["oem"]}/{config["product"]}/{config["device"]}:{config["android_version"]}/{config["build_tag"]}/{config["incremental"]}:user/release-keys',
+                                    config['model'], args.debug, args.serial, args.imei, args.timestamp)
             except:
                 print("Invalid config file.")
                 exit(1)
