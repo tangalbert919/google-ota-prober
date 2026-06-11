@@ -15,7 +15,7 @@ def main(page: ft.Page):
     # Needed methods for buttons
     def start_probe(e):
         global url
-        url = prober.checkin(fingerprint.value, model.value, serial.value, imei.value)
+        url = prober.checkin(fingerprint.value, model.value, serial.value, imei.value, timestamp.value)
         if url is not None:
             update_info.value = "An update is available!"
             downloadBtn.disabled = False
@@ -107,6 +107,7 @@ def main(page: ft.Page):
     model = ft.TextField(label="Enter model here (optional)")
     serial = ft.TextField(label="Enter serial number here (optional)")
     imei = ft.TextField(label="Enter IMEI here (optional)")
+    timestamp = ft.TextField(label="Enter timestamp here (optional)")
     probeBtn = ft.ElevatedButton("Start probe", bgcolor="#057A2C", color="#FFFFFF", on_click=start_probe, disabled=True)
     downloadBtn = ft.ElevatedButton("Download", on_click=download, disabled=True)
     saveBtn = ft.ElevatedButton("Save", on_click=save_fingerprint, disabled=True)
@@ -122,7 +123,8 @@ def main(page: ft.Page):
                 content=ft.Column(
                     controls=[
                         serial,
-                        imei
+                        imei,
+                        timestamp
                     ]
                 )
             )
